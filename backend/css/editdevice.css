@@ -1,0 +1,85 @@
+.edit-device .form-group .form-item {
+  margin-bottom: 15px;
+  font-size: 0;
+}
+
+.edit-device .form-group .form-item input,
+.edit-device .form-group .form-item>div,
+.edit-device .form-group .form-item label,
+.edit-device .form-group .form-item input~span,
+.edit-device .form-group .form-item strong,
+.edit-device .form-group .form-item button,
+.edit-device .form-group .form-item.multi-box>div {
+  font-size: 14px;
+}
+
+.edit-device .form-group .form-item label {
+  margin-right: 10px;
+  min-width: 120px;
+  max-width: 120px;
+  word-break: break-all;
+  text-align: right;
+}
+
+.edit-device .form-group .form-item input~span {
+  margin-left: 10px;
+}
+
+.edit-device .form-group .form-item strong {
+  margin-left: 10px;
+  color: red;
+}
+
+.edit-device .form-group .form-item button {
+  padding: 0 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #32b5ea;
+  color: #fff;
+  border: none;
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.edit-device .form-group .form-item.multi-box>div {
+  margin-left: 130px;
+}
+
+.edit-device .form-group .form-item.multi-box>label {
+  float: left;
+}
+
+.edit-device .form-group .form-item.multi-box>div span {
+  margin-right: 15px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+
+.edit-device .form-group .form-item.multi-box>div span input {
+  margin-right: 5px;
+}
+
+.edit-device .form-check-group {
+  position: relative;
+}
+
+.edit-device .form-group .form-item .upload-file {
+  padding-left: 30px;
+  background-image: url(../images/addattach.png);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  cursor: pointer;
+}
+
+.edit-device .form-group .form-item .upload-file~input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 200px;
+  visibility: hidden;
+}

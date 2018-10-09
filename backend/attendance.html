@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>考勤组管理详情</title>
+    <link rel="stylesheet" href="css/amazeui.min.css"/>
+    <link rel="stylesheet" href="css/amazeui.datetimepicker.css"/>
+    <link rel="stylesheet" href="css/attendance.css">
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+
+<body>
+    <div class="attendance-wrapper">
+        <div class="attendance-item clearfix">
+            <span class="item-tit">考勤组名称</span>
+            <div class="details">
+                <input type="text" value="楼里楼外">
+            </div>
+        </div>
+        <div class="attendance-item clearfix margin-b10">
+            <span class="item-tit">参与考勤组人员</span>
+            <div class="details">
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>财务部</button>
+                <button>王永旭</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>技术部</button>
+                <button>财务部</button>
+                <button>王永旭</button>
+            </div>
+        </div>
+        <div class="attendance-item clearfix">
+            <span class="item-tit">无需考勤人员</span>
+            <div class="details">
+                <button>许首旭</button>
+            </div>
+        </div>
+        <div class="attendance-item clearfix">
+            <span class="item-tit">考勤类型</span>
+            <div class="details">
+                <div class="check-box">
+                    <input type="radio" name="atten-type" id="fixed">
+                    <label for="fixed" class="check-box">固定班次
+                        <i>（每天的考勤时间都一样）</i>
+                    </label>
+                </div>
+                <div class="check-box">
+                    <input type="radio" name="atten-type" id="regular">
+                    <label for="regular" class="check-box">按规则排班
+                        <i>（根据定义的规则排班考勤）</i>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="attendance-item clearfix">
+            <span class="item-tit">工作日设置</span>
+            <div class="details">
+                <table cellpadding="0" cellspacing="0" class="margin-b10">
+                    <thead>
+                        <tr>
+                            <th width="62px">全选</th>
+                            <th width="156px">工作日</th>
+                            <th width="240px">班次时间段</th>
+                            <th width="200px">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="monday"><label for="monday"></label>
+                            </td>
+                            <td>周一</td>
+                            <td>公司班 8:30-17:30</td>
+                            <td>更改班次</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="tuesday"><label for="tuesday"></label>
+                            </td>
+                            <td>周二</td>
+                            <td>公司班 8:30-17:30</td>
+                            <td>更改班次</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="wednesday"><label for="wednesday"></label>
+                            </td>
+                            <td>周三</td>
+                            <td>公司班 8:30-17:30</td>
+                            <td>更改班次</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="thursday"><label for="thursday"></label>
+                            </td>
+                            <td>周四</td>
+                            <td>公司班 8:30-17:30</td>
+                            <td>更改班次</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="friday"><label for="friday"></label>
+                            </td>
+                            <td>周五</td>
+                            <td>公司班 8:30-17:30</td>
+                            <td>更改班次</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="saturday"><label for="saturday"></label>
+                            </td>
+                            <td>周五</td>
+                            <td>公司班 8:30-17:30</td>
+                            <td>更改班次</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="sunday"><label for="sunday"></label>
+                            </td>
+                            <td>周五</td>
+                            <td>公司班 8:30-17:30</td>
+                            <td>更改班次</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="check-box">
+                    <input type="checkbox" name="vacation" id="vacation">
+                    <label for="vacation" class="check-box">法定假日自动休息</label>
+                </div>
+            </div>
+        </div>
+        <div class="attendance-item clearfix">
+            <span class="item-tit">特殊日期</span>
+            <div class="details">
+                <button class="show-date">添加打卡日期</button>
+                
+                <table cellpadding="0" cellspacing="0" class="margin-t10" style="margin-bottom: 30px;">
+                    <thead>
+                        <tr>
+                            <th width="160px">日期</th>
+                            <th width="240px">考勤时间</th>
+                            <th width="200px">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2018.4.10</td>
+                            <td>上午班8:30-11:30</td>
+                            <td>
+                                <span class="edit show-date">编辑</span>
+                                <span class="delete">删除</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="show-date">添加不打卡日期</button>
+                
+                <table cellpadding="0" cellspacing="0" class="margin-t10 margin-b10">
+                    <thead>
+                        <tr>
+                            <th width="160px">日期</th>
+                            <th width="240px">考勤时间</th>
+                            <th width="200px">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2018.4.10</td>
+                            <td>上午班8:30-11:30</td>
+                            <td>
+                                <span class="edit show-date">编辑</span>
+                                <span class="delete">删除</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="attendance-item clearfix">
+            <span class="item-tit">考勤方式</span>
+            <div class="details">
+                <div class="select-box">
+                    <span>根据位置考勤</span>
+                    <ul>
+                        <li>根据位置考勤</li>
+                        <li>根据员工所处网络考勤</li>
+                    </ul>
+                </div>
+                <div class="select-box">
+                    <span>100米</span>
+                    <ul>
+                        <li>200米</li>
+                        <li>300米</li>
+                        <li>400米</li>
+                        <li>500米</li>
+                        <li>600米</li>
+                        <li>700米</li>
+                    </ul>
+                </div>
+                <button class="show-location">添加位置</button><span>（可同时添加多个地址）</span>
+                <table cellpadding="0" cellspacing="0" class="margin-t10 margin-b10">
+                    <thead>
+                        <tr>
+                            <th width="160px">位置名称</th>
+                            <th width="240px">地点</th>
+                            <th width="200px">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>公司</td>
+                            <td>长春市二道区天华苑</td>
+                            <td>
+                                <span class="delete">删除</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="check-box">
+                    <input type="checkbox" name="vacation" id="outside">
+                    <label for="outside" class="check-box">允许外勤打卡</label>
+                </div>
+            </div>
+        </div>
+        <div class="attendance-item clearfix">
+            <span class="item-tit">考勤方式</span>
+            <div class="details">
+                <div class="select-box">
+                    <span>根据位置考勤</span>
+                    <ul>
+                        <li>根据位置考勤</li>
+                        <li>根据员工所处网络考勤</li>
+                    </ul>
+                </div>
+               <button class="show-network">添加网路</button><span>（可同时添加多个网络）</span>
+               <table cellpadding="0" cellspacing="0" class="margin-t10" style="margin-bottom: 30px;">
+                   <thead>
+                       <tr>
+                           <th width="160px">名称</th>
+                           <th width="240px">Mac地址</th>
+                           <th width="200px">操作</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>公司WiFi</td>
+                           <td>1123132132</td>
+                           <td>
+                               <span class="delete">删除</span>
+                           </td>
+                       </tr>
+                   </tbody>
+               </table>
+               <div class="save">保存设置</div>
+            </div>
+        </div>
+
+
+        <div class="popup-wrapper">
+            <div class="popup-head">
+                <i class="close"></i>
+            </div>
+            <div class="popup-container">
+
+                <div class="pop-date">
+                    <div class="date-tit">
+                        必须打卡日期
+                        <input type="text" value="" id="work-date">
+                    </div>
+                    <h3>打卡班次</h3>
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th></th>
+                            <th>班次名称</th>
+                            <th>考勤名称</th>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="working" id="morning"><label for="morning"></label></td>
+                            <td>上午班</td>
+                            <td>8:30-11:30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="working" id="afternoon"><label for="afternoon"></label></td>
+                            <td>上午班</td>
+                            <td>8:30-11:30</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="pop-network">
+                    <div class="date-tit">
+                        添加网络
+                    </div>
+                    <div class="inp-item">
+                        <label for="">名称</label>
+                        <input type="text">
+                    </div>
+                    <div class="inp-item">
+                        <label for="">Mac地址</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="pop-location">
+                    <div class="map-inner">
+                        <div class="search">
+                            搜索位置<input type="text">
+                        </div>
+                    </div>
+                    <div class="inp-item">
+                        <label for="">位置名称</label>
+                        <input type="text">
+                    </div>
+                    <div class="inp-item">
+                        <label for="">详细地址：</label>XXXXXXX
+                    </div>
+                </div>
+
+            </div>
+            <div class="popup-footer">
+                <button class="sure">确定</button>
+                <button class="cancel">取消</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/amazeui.datetimepicker.js"></script>
+    <script>
+        $('.select-box').click(function (e){
+            e.stopPropagation();
+            $(this).find('ul').slideToggle();
+        });
+        $(document).click(function(){
+            $('.select-box').find('ul').slideUp();
+        });
+        $('.select-box ul li').click(function (e){
+            e.stopPropagation();
+            $(this).parents('.select-box').find('span').html($(this).html());
+            $(this).parents('.select-box').find('ul').slideToggle();
+        });
+
+        // 添加不打卡日期
+        $('.show-date').click(function (){
+            $('.popup-wrapper').show();
+            $('.pop-date').show();
+        });
+        // 添加网络
+        $('.show-network').click(function (){
+            $('.popup-wrapper').show();
+            $('.pop-network').show();
+        });   
+        // 添加位置
+        $('.show-location').click(function (){
+            $('.popup-wrapper').show();
+            $('.pop-location').show();
+        });   
+        $('.close').click(function (){
+            $('.popup-wrapper').hide();
+            $('.pop-date').hide();
+            $('.pop-network').hide();
+            $('.pop-location').hide();
+        });
+        // 日期控件 
+        $('#work-date').datetimepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+                startView: 2,
+                minView: 2
+            });
+    </script>
+</body>
+
+</html>

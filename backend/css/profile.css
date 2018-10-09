@@ -1,0 +1,210 @@
+.profile {
+  position: relative;
+  padding: 10px 0 20px 20px;
+}
+
+.profile h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.profile h3 {
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.btns .a-btn {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0 25px;
+  margin-right: 40px;
+  height: 35px;
+  vertical-align: top;
+  line-height: 35px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #00afff !important;
+  background: #fff;
+  border: 1px solid #00afff;
+  outline: none;
+}
+.btns .a-btn:last-child {
+  margin-right: 0;
+}
+
+.form-item label {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
+
+.profile form {
+  padding-left: 30px;
+}
+
+.profile .head .form-group,
+.profile .head .avatar {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.profile .head .avatar img {
+  min-width: 150px;
+  max-width: 150px;
+  height: 130px;
+  line-height: 130px;
+  text-align: center;
+  background: #eee;
+}
+
+.profile .head .avatar input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.profile .form-item {
+  position: relative;
+  padding-right: 30px;
+}
+
+.profile .form-item strong {
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 40px;
+}
+
+.profile .btns {
+  margin-top: 20px;
+  font-size: 0;
+}
+
+
+
+.profile .btns .a-btn:last-child {
+  margin-right: 0;
+}
+
+.profile .add-file {
+  position: relative;
+  display: inline-block;
+  padding: 0 25px;
+  border-radius: 5px;
+  color: #00afff !important;
+  background: #fff;
+  border: 1px solid #00afff;
+  vertical-align: top;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.profile .attach-lists {
+  margin-top: 15px;
+}
+
+.profile .attach-lists label {
+  line-height: 22px;
+}
+
+.profile .attach-lists .form-item {
+  margin-bottom: 25px;
+}
+
+.profile .show-file {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+}
+
+.profile .show-file img {
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+}
+
+.profile .show-file a {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  word-break: break-all;
+}
+
+.profile .show-file i {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/red-close.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.profile-mask,
+.img-mask {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+}
+
+.img-mask img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.profile-mask .attach-wrapper {
+  position: absolute;
+  top: 50%;
+  padding: 70px 80px 40px;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background: #fff;
+}
+
+.profile-mask .attach-wrapper label {
+  margin-bottom: 20px;
+  width: 80px;
+}
+
+.profile-mask .attach-wrapper .btns {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.profile-mask .attach-wrapper .form-item {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.profile-mask .attach-wrapper .load-file span {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  width: 200px;
+  text-align: center;
+} 
+
+.profile-mask .attach-wrapper input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  visibility: hidden;
+}

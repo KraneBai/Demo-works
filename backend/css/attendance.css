@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    height: 0;
+    display: block;
+}
+
+.attendance-wrapper {
+    padding-top: 30px;
+    font-size: 14px;
+}
+
+.attendance-wrapper .attendance-item {
+    margin-bottom: 20px;
+}
+
+.margin-b10 {
+    margin-bottom: 10px;
+}
+
+.margin-t10 {
+    margin-top: 10px;
+}
+
+.attendance-wrapper .attendance-item span.item-tit {
+    float: left;
+    width: 120px;
+    text-align: right;
+    line-height: 40px;
+    vertical-align: top;
+    color: #333;
+}
+
+.attendance-wrapper .attendance-item .details {
+    margin-left: 146px;
+    height: 100%;
+}
+
+.attendance-wrapper .attendance-item .details input[type="text"],
+.attendance-wrapper .attendance-item .details select {
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 240px;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid #e0e0e0;
+}
+
+.attendance-wrapper .attendance-item .details select {
+    color: #333;
+}
+
+.attendance-wrapper .attendance-item button,
+.attendance-wrapper .attendance-item a.btn, 
+.attendance-wrapper .attendance-item input.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 0 20px;
+    height: 36px;
+    line-height: 36px;
+    color: #00afff;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #00afff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.attendance-wrapper .attendance-item button:hover {
+    color: #fff;
+    background: #00afff;
+}
+
+.attendance-wrapper .attendance-item button+span {
+    color: #999;
+}
+
+
+.attendance-wrapper .attendance-item table tr th,
+.attendance-wrapper .attendance-item table tr td {
+    min-width: 160px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #333;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+}
+
+.attendance-wrapper .attendance-item table tr th.wid80,
+.attendance-wrapper .attendance-item table tr td.wid80 {
+    min-width: 80px;
+}
+
+.attendance-wrapper .attendance-item table tr th {
+    border-top: 1px solid #e5e5e5;
+    background-color: #f8f8f8;
+    font-weight: normal;
+}
+
+.attendance-wrapper .attendance-item table tr td:last-child,
+.attendance-wrapper .attendance-item table tr th:last-child {
+    border-right: 1px solid #e5e5e5;
+}
+
+.attendance-wrapper .attendance-item table tr td span {
+    display: inline-block;
+    padding: 0 10px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.attendance-wrapper .attendance-item table span.edit {
+    margin-right: 20px;
+    background: #00afff;
+}
+
+.attendance-wrapper .attendance-item table span.delete {
+    background: #b5b5b5;
+}
+
+.attendance-wrapper .attendance-item .details .save {
+    display: inline-block;
+    padding: 0 44px;
+    background: #30a7da;
+    color: #fff;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 5px;
+}
+
+.attendance-wrapper .attendance-item .details .select-box {
+    position: relative;
+    margin-bottom: 20px;
+    width: 260px;
+}
+
+.attendance-wrapper .attendance-item .details .select-box ul li,
+.attendance-wrapper .attendance-item .details .select-box span {
+    padding: 0 10px;
+    height: 40px;
+    width: 260px;
+    line-height: 40px;
+    color: #333;
+    border: 1px solid #efefef;
+    background: #fff;
+    list-style: none;
+    cursor: pointer;
+}
+
+.attendance-wrapper .attendance-item .details .select-box span {
+    position: relative;
+    display: inline-block;
+    background-image: url(../images/arrow_down_gray.png);
+    background-size: 10px 6px;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+}
+
+.attendance-wrapper .attendance-item .details .select-box ul {
+    box-sizing: border-box;
+    padding: 0;
+    margin-top: 0;
+    display: none;
+    position: absolute;
+    z-index: 999;
+}
+
+.attendance-wrapper .attendance-item .details .select-box ul li:hover,
+.attendance-wrapper .attendance-item .details .select-box ul li.active {
+    color: #00afff;
+}
+
+.attendance-wrapper .attendance-item .details .check-box i {
+    color: #999;
+    font-style: normal;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+	visibility: hidden;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    color: #333;
+    cursor: pointer;
+    font-weight: normal;
+}
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 16px;
+    border-radius: 2px;
+    border: 1px solid #bfbfbf;
+}
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+    border: 1px solid #00afff;
+}
+input[type="checkbox"]:checked + label::before {
+    background-image: url('../images/check.png');
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: center center;
+}
+input[type="radio"] + label::before {
+    border-radius: 50%;
+}
+input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 50%;
+    margin-top: 0px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: #00afff;
+    border-radius: 50%;
+}
+
+.attendance-wrapper .attendance-item table td{
+    position: relative;
+}
+.attendance-wrapper .attendance-item table td label{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    margin-left: 0;
+    height: 16px;
+    width: 16px;
+}
+.attendance-wrapper .attendance-item table td label:before{
+    left: 0;
+}

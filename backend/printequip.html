@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>设备信息设计器</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/equipment.css">
+</head>
+
+<body>
+    <div class="print-equipment">
+        <p class="p-tips">添加相应标签，拖拽到指定位置点击保存后设置生效</p>
+        <form action="">
+            <div class="form-group form-inline">
+                <div class="form-item" style="margin-right: 22px;">
+                    <div class="select-list need-tag">
+                        <span>请选择需要的标签</span>
+                        <input type="hidden">
+                        <ul>
+                            <li drag-type="">请选择需要的标签</li>
+                            <li drag-type="text">文本</li>
+                            <li drag-type="text">联系人</li>
+                            <li drag-type="dashed">虚线</li>
+                            <li drag-type="solid">实线</li>
+                            <li drag-type="auto">自定义</li>
+                            <li drag-type="code">二维码</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-item form-abtn" style="margin-right: 30px; padding-top: 3px;">
+                    <a href="javascript:;" class="btn-a btn-txt-blue remove-tag">删除标签</a>
+                </div>
+                <div class="form-item">
+                    <label>打印单据尺寸：长</label>
+                    <input class="w100 post-width" type="text" />
+                    <label>宽</label>
+                    <input class="w100 post-height" type="text" />
+                    <label>cm</label>
+                </div>
+                <div class="form-item">
+                    <a href="javascript:;" class="btn-a btn-txt-blue remove-bgimg" style="margin-right: 22px;">删除打印单样式图片</a>
+                    <a href="javascript:;" class="btn-a btn-txt-fff upload-bgimg" onclick="$('.file-img').click();">上传打印单样式图片</a>
+                    <input class="file-img" type="file" style="visibility: hidden;" />
+                </div>
+            </div>
+
+            <div class="print-template">
+                <h3>
+                    <a href="">&lt;返回</a>
+                </h3>
+                <div class="form-wrapper">
+                    <div class="print-inner-wrapper">
+                        <input type="hidden" class="allTags">
+
+                        <!-- 单据背景照片 -->
+                        <img src="images/AJ.jpg" alt="">
+
+                        <!-- 存放单据标签 -->
+                        <div class="drag-item-wrapper">
+                            <!-- 自定义 -->
+                            <div drag-type="customize" class="drag-item customize" id="box0">
+                                <span>111</span>
+                                <div class="coor" id="coor0"></div>
+                            </div>
+
+                            <!-- 二维码 -->
+                            <img drag-type="code" src="images/code.gif" class="drag-item code" id="box1" draggable="false">
+
+                            <!-- 文本 -->
+                            <input drag-type="text" type="text" class="drag-item text" id="box2">
+
+                            <!-- <div class="drag-item solid turn"><i class="prev"></i><i class="next"></i></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="print-btns">
+                <a href="javascript:;" class="btn-txt-blue view-btn">预览</a>
+                <input class="blue btn-a save-settings" value="保存设置" type="submit" />
+                <a href="javascript:;" class="green reset-img">恢复默认</a>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="mask">
+        <form class="view-form" action="">
+            <div class="print-btns">
+                <input class="blue btn-a save-settings" value="保存并启用" type="submit" />
+                <a href="javascript:;" class="green edit-again">继续编辑</a>
+            </div> 
+        </form>
+    </div>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/drag.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>个人信息</title>
+  <link rel="stylesheet" href="css/amazeui.min.css" />
+  <link rel="stylesheet" href="css/amazeui.datetimepicker.css" />
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+  <div class="profile">
+    <h1>王永旭的个人档案</h1>
+    <form action="">
+
+      <div class="head">
+        <div class="form-group form-inline">
+          <div class="form-item">
+            <label>姓名：</label>
+            <input type="text" />
+          </div>
+          <div class="form-item">
+            <label>部门：</label>
+            <input type="text" />
+          </div>
+
+          <br />
+          <div class="form-item">
+            <label>角色：</label>
+            <div class="select-list">
+              <span>操作员</span>
+              <input type="text">
+              <ul>
+                <li>操作员</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="form-item">
+            <label>员工类型：</label>
+            <div class="select-list">
+              <span>全职</span>
+              <input type="text">
+              <ul>
+                <li>全职</li>
+                <li>兼职</li>
+                <li>实习</li>
+                <li>其他</li>
+              </ul>
+            </div>
+          </div>
+
+          <br />
+          <div class="form-item date-item">
+            <label>入职时间：</label>
+            <input type="text" id="start-job" />
+          </div>
+          <div class="form-item date-item">
+            <label>试用期至：</label>
+            <input type="text" id="end-job" />
+          </div>
+        </div>
+        <div class="avatar">
+          <img src="images/Doge.jpg" alt="名字">
+          <input type="file">
+          <!-- <img src="" alt="名字"> -->
+        </div>
+      </div>
+
+
+      <h3>基本信息</h3>
+      <div class="form-group form-inline">
+        <div class="form-item">
+          <label>联系电话：</label>
+          <input type="text" />
+        </div>
+        <div class="form-item">
+          <label>系统账号：</label>
+          <input type="text" />
+        </div>
+        <br />
+        <div class="form-item">
+          <label>性别：</label>
+          <div class="select-list">
+            <span>男</span>
+            <input type="text">
+            <ul>
+              <li>男</li>
+              <li>女</li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-item">
+          <label>户籍类型：</label>
+          <div class="select-list">
+            <span>本地城镇</span>
+            <input type="text">
+            <ul>
+              <li>本地城镇</li>
+              <li>本地农村</li>
+              <li>外地城镇</li>
+              <li>外地农村</li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <div class="form-item">
+          <label>分机号码：</label>
+          <input type="text" />
+        </div>
+        <div class="form-item">
+          <label>健康状况：</label>
+          <input type="text" />
+        </div>
+        <br />
+        <div class="form-item">
+          <label>身高：</label>
+          <input type="text" />
+          <strong>CM</strong>
+        </div>
+        <div class="form-item">
+          <label>体重：</label>
+          <input type="text" />
+          <strong>KG</strong>
+        </div>
+        <br />
+        <div class="form-item">
+          <label>证件号码：</label>
+          <input type="text" />
+        </div>
+        <div class="form-item">
+          <label>住址：</label>
+          <input type="text" />
+        </div>
+        <br />
+        <div class="form-item">
+          <label>紧急联系人：</label>
+          <input type="text" />
+        </div>
+        <div class="form-item">
+          <label>紧急联系人电话：</label>
+          <input type="text" />
+        </div>
+      </div>
+
+      <h3>银行卡信息</h3>
+      <div class="form-group form-inline">
+        <div class="form-item">
+          <label>银行卡号：</label>
+          <input type="text" />
+        </div>
+        <div class="form-item">
+          <label>开户行：</label>
+          <input type="text" />
+        </div>
+        <h3>学历信息</h3>
+        <div class="form-group form-inline">
+          <div class="form-item">
+            <label>最高学历：</label>
+            <input type="text" />
+          </div>
+          <div class="form-item date-item">
+            <label>毕业时间：</label>
+            <input type="text" id="graduate" />
+          </div>
+          <br />
+          <div class="form-item">
+            <label>毕业院校：</label>
+            <input type="text" />
+          </div>
+          <div class="form-item">
+            <label>所学专业：</label>
+            <input type="text" />
+          </div>
+        </div>
+      </div>
+
+      <h3>家庭状况</h3>
+      <div class="form-group form-inline">
+        <div class="form-item">
+          <label>家属姓名：</label>
+          <input type="text" />
+        </div>
+        <div class="form-item">
+          <label>年龄：</label>
+          <input type="text" />
+        </div>
+        <br />
+        <div class="form-item">
+          <label>与本人关系：</label>
+          <div class="select-list">
+            <span>父母</span>
+            <input type="text">
+            <ul>
+              <li>父母</li>
+              <li>子女</li>
+              <li>亲属</li>
+              <li>其他</li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-item">
+          <label>供职单位：</label>
+          <input type="text" />
+        </div>
+        <br />
+        <div class="form-item">
+          <label>联系方式：</label>
+          <input type="text" />
+        </div>
+      </div>
+      <h3>个人材料</h3>
+      <div class="form-group form-inline">
+        <div class="form-item">
+          <label>附件：</label>
+          <a class="add-file" href="javascript:;">添加附件</a>
+        </div>
+        <div class="attach-lists">
+          <div class="form-item">
+            <label>身份证：</label>
+            <span class="show-file">
+              <img src="images/Doge.jpg">
+            </span>
+          </div>
+          <div class="form-item">
+            <label>身份证：</label>
+            <span class="show-file">
+              <img src="images/Doge.jpg">
+            </span>
+          </div>
+          <div class="form-item">
+            <label>身份证身份证身份证身份证身份证身份证身份证身份证：</label>
+            <span class="show-file">
+              <img src="images/Doge.jpg">
+              <a>信息信息信息信息信息信息信息信息信息信息信息信息</a>
+              <i class="remove"></i>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="btns">
+        <input class="a-btn" type="submit" value="编辑/保存">
+        <a class="a-btn" href="javascript:;">打印</a>
+        <a class="a-btn" href="javascript:;">离职</a>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="profile-mask">
+    <div class="attach-wrapper form-group">
+      <div class="form-item">
+        <label>附件名称：</label>
+        <input type="text" id="attach-name" />
+      </div>
+      <div class="form-item load-file">
+        <label>文件：</label>
+        <span>
+          <a href="javascript:;" onclick="$('#file-load').click();">选择文件</a>
+          <input type="file" id="file-load" />
+        </span>
+      </div>
+      <div class="btns">
+        <a class="a-btn sure" href="javascript:;">确定</a>
+        <a class="a-btn cancel" href="javascript:;">取消</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="img-mask">
+    <img src="images/Doge.jpg">
+  </div>
+
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/amazeui.datetimepicker.js"></script>
+  <script>
+    $('#start-job').datetimepicker({
+      format: 'yyyy-mm-dd',
+      autoclose: true,
+      startView: 2,
+      minView: 2
+    });
+    $('#end-job').datetimepicker({
+      format: 'yyyy-mm-dd',
+      autoclose: true,
+      startView: 2,
+      minView: 2
+    });
+    $('#graduate').datetimepicker({
+      format: 'yyyy-mm-dd',
+      autoclose: true,
+      startView: 2,
+      minView: 2
+    });
+    // 下拉选框
+    $(document).on('click', '.select-list span', function (e) {
+      e.stopPropagation();
+      $(this).siblings('ul').slideToggle();
+    });
+    $(document).click(function (e) {
+      $('.select-list ul').slideUp();
+      $('.profile-mask').hide();
+      $('.img-mask').hide();
+    });
+    // 赋值下拉选框
+    $(document).on('click', '.select-list ul li', function (e) {
+      $(this).parents('.select-list').find('span').html($(this).html());
+      $('.select-list ul').slideUp();
+      $(this).parents('.select-list').find('input').val($(this).html()).attr('data-val', $(this).html());
+    });
+
+    // 添加附件
+    $('.add-file').click(function (e) {
+      e.stopPropagation();
+      $('.profile-mask').show();
+    });
+    // 阻止冒泡
+    $(document).on('click', '.profile-mask .attach-wrapper', function (e) {
+      e.stopPropagation();
+    });
+
+    $(document).on("change", '#file-load', function () {
+      $('.profile-mask .tip').remove();
+    });
+    // mask确定
+    $(document).on('click', '.sure', function () {
+      if($('#file-load').val() == ''){
+        $('<p class="tip" style="color: red; text-align: center; font-size: 14px;">请上传文件</p>').insertBefore($('.profile-mask .btns'))
+        return false;
+      }
+      var str = '<div class="form-item">\
+                    <label>' + $('#attach-name').val() + '：</label>\
+                    <span class="show-file">\
+                      <img src="images/Doge.jpg">\
+                      <a>' + $('#file-load').val() + '</a>\
+                      <i class="remove"></i>\
+                    </span>\
+                  </div>';
+      $('.attach-lists').append(str);
+      $('.profile-mask').hide();
+    });
+    // mask取消
+    $(document).on('click', '.cancel', function () {
+      $('.profile-mask').hide();
+    });
+    // mask空白区域
+    $(document).on('click', '.profile-mask', function (e) {
+      $('.profile-mask').hide();
+    });
+    // 删除添加的附件
+    $(document).on('click', '.remove', function (e) {
+      $(this).parents('.form-item').remove();
+    });
+
+
+    // 附件图片点击放大
+    $('.profile .show-file img').click(function (e) {
+      e.stopPropagation();
+      $('.img-mask').show();
+    });
+    $('.img-mask img').click(function (e) {
+      e.stopPropagation();
+    });
+  </script>
+
+</body>
+
+</html>

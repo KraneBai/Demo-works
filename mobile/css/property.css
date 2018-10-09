@@ -1,0 +1,265 @@
+body {
+  -webkit-overflow-scrolling: touch;
+}
+/* 转赠 */
+.transfer h3 {
+  text-align: center;
+  line-height: 0.4rem;
+  font-size: 0.14rem;
+  color: #333;
+}
+.transfer input[type="text"],
+.transfer textarea {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 0.1rem;
+  padding: 0 0.1rem;
+  height: 0.45rem;
+  background: #fff;
+  color: #bbb;
+  width: 100%;
+  border: none;
+  font-size: 0.14rem;
+}
+.transfer input::placeholder {
+  color: #bbb;
+}
+.transfer textarea {
+  padding: 0.2rem 0.1rem 0; 
+  height: 1.12rem;
+  background: #fff;
+  color: #bbb;
+}
+.transfer .sub {
+  padding: 0 0.15rem;
+}
+.transfer input[type="submit"] {
+  margin-bottom: 0.15rem;
+  height: 0.38rem;
+  line-height: 0.38rem;
+  text-align: center;
+  background: #ff423a;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.transfer > p {
+  padding: 0 0.36rem; 
+  font-size: 0.12rem;
+  text-align: center;
+  color: #ff423a;
+}
+
+/* 关于物业币 */
+
+.about {
+  box-sizing: border-box;
+  padding: 0.2rem 0.15rem;
+  color: #333;
+}
+.about h1 {
+  margin-bottom: 0.22rem;
+  text-align: center;
+  font-size: 0.16rem;
+}
+.about section {
+  margin-bottom: 0.2rem;
+}
+.about section nav {
+  margin-bottom: 0.15rem;
+  font-size: 0.14rem;
+}
+.about section article,
+.about footer {
+  font-size: 0.12rem;
+}
+
+/* 物业币转赠历史 */
+
+.history ul li section {
+  margin-bottom: 0.1rem;
+  padding: 0.05rem 0.15rem 0.1rem;
+  background: #fff;
+}
+
+.history ul li section dl {
+  display: flex;
+  font-size: 0.14rem;
+}
+
+.history ul li section dl dt {
+  box-sizing: border-box;
+  margin-right: 0.15rem;
+  width: 0.6rem;
+  color: #666;
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.history ul li section dl dd {
+  flex: 1;
+  color: #333;
+}
+
+.history ul li section dl:last-child {
+  padding-top: 0.07rem;
+  margin-top: 0.07rem;
+  border-top: 1px solid #f3f3f3;
+}
+
+/* 物业币明细 */
+
+
+.detail ul li {
+  display: flex;
+  padding: 0.12rem 0;
+  border-bottom: 1px solid #f6f6f6;
+  color: #333;
+  align-items: center;
+  background: #fff;
+}
+.detail ul li:last-child {
+  border-bottom: none;
+}
+.detail ul li aside {
+  margin-left: 0.15rem;
+  width: 1.62rem;
+  margin-left: 0.15rem;
+}
+.detail ul li aside h4 {
+  font-size: 0.14rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.detail ul li aside p {
+  margin-top: 0.1rem;
+  color: #999;
+  font-size: 0.11rem;
+}
+.detail ul li span {
+  margin-right: 0.15rem;
+  flex: 1;
+  text-align: right;
+  font-size: 0.15rem;
+}
+.detail ul li span.plus {
+  color: #32a41e;
+}
+
+/* 物业币 */
+.property header {
+  display: flex;
+  color: #333;
+  font-size: 0.14rem;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.property header .left,
+.property header .right {
+  flex: 1;
+  text-align: center;
+}
+
+.property header aside dl dd {
+  margin-top: 0.12rem;
+}
+
+.property header .left dl dd img {
+  margin-right: 0.05rem;
+  vertical-align: middle;
+  width: 0.26rem;
+  height: 0.26rem;
+}
+
+.property header .right dl {
+  padding: 0.12rem 0;
+  border-left: 1px solid #f6f6f6;
+}
+
+.property header .right dl:last-child {
+  border-top: 1px solid #f6f6f6;
+}
+
+.property>nav {
+  margin-top: 0.1rem;
+  padding: 0 0.15rem;
+  height: 0.5rem;
+  background-color: #fff;
+  line-height: 0.5rem;
+  color: #333;
+  font-size: 0.14rem;
+  background-repeat: no-repeat;
+  background-size: 0.1rem 0.1rem;
+  background-position: right 0.15rem center;
+  background-image: url(../images/arrow_right.png);
+}
+
+.property>p {
+  margin-top: 0.3rem;
+  padding: 0 0.15rem;
+  text-align: center;
+  line-height: 0.26rem;
+  color: #ff423a;
+  font-size: 0.12rem;
+}
+
+/* 上拉加载 */
+
+.loading-bottom {
+  text-align: center;
+  color: #666;
+  font-size: 0.14rem;
+  line-height: 0.4rem;
+}
+
+/* 物业币明细 */
+.coins {
+  padding-bottom: 0.15rem;
+  background: #fff;
+  font-size: 0.14rem;
+}
+
+.coins dl {
+  margin-bottom: 0.1rem;
+  padding: 0 0.1rem;
+  display: flex;
+  min-height: 0.3rem;
+}
+
+.coins dl dt {
+  margin-right: 0.2rem;
+  width: 0.6rem;
+  color: #999;
+  /* 文字两端对齐 */
+  text-align: justify;
+  text-justify: distribute-all-lines; /* ie6-8 */
+  text-align-last: justify; /* ie9 */
+  -moz-text-align-last: justify; /* ff */
+  -webkit-text-align-last: justify; /* chrome 20+ */
+}
+
+.coins dl dd {
+  flex: 1;
+  text-align: right;
+  color: #333;
+}
+
+.coins dl:first-child {
+  height: 0.74rem;
+  line-height: 0.74rem;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.coins dl:first-child dd {
+  color: #020202;
+  font-size: 0.25rem;
+}
+.coins dl:first-child dd {
+  color: #020202;
+  font-size: 0.25rem;
+}

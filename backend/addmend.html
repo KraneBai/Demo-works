@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <title>新报修上报</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body, html{
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+        /* 重置 */
+        select {
+            /* 很关键：将默认的select选择框样式清除 */
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            /*在选择框的最右侧中间显示小箭头图片*/
+            background: url("images/arrow_down_gray.png") no-repeat scroll 200px center #fff;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul, li{
+            list-style: none;
+        }
+        /* 浮层内容区域 */
+        .mask-wrapper{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .6);
+            z-index: 999;
+        }
+        .mend-box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -340px;
+            margin-top: -247px;
+            width: 680px;
+            height: 494px;
+            border-radius: 5px;
+            background: #fff;
+            font-size: 14px;
+        }
+        .mend-box .mend-title{
+            position: relative;
+            padding-left: 20px;
+            background: #eee;
+            height: 54px;
+        }
+        .mend-box .mend-title p{
+            display: inline-block;
+            margin-right: 40px;
+            color: #00afff;
+            line-height: 54px;
+        }
+        /* .mend-box .mend-title select{
+            position: relative;
+            display: inline-block;
+            width: 220px;
+            height: 34px;
+            line-height: 34px;
+            vertical-align: middle;
+            font-size: 14px;
+            color: #333;
+            box-sizing: border-box;
+            padding: 0 10px 0 22px;
+            border-radius: 20px;
+            outline: none;
+        } */
+        .mend-box .mend-title .mend-list-wrapper{
+            position: relative;
+            display: inline-block;
+            width: 220px;
+            height: 34px;
+            line-height: 34px;
+            vertical-align: middle;
+            font-size: 14px;
+            color: #333;
+        }
+        .mend-list-wrapper .mend-list-item{
+            box-sizing: border-box;
+            padding: 0 10px 0 22px;
+            background: #fff;
+            border-radius: 20px;
+        }
+        .mend-box .mend-title .mend-list-wrapper span{
+            margin-left: 12px;
+            color: #00afff;
+        }
+        .mend-box .mend-title .mend-list-wrapper i{
+            position: absolute;
+            right: 10px;
+            top: 14px;
+            width: 10px;
+            height: 6px;
+            vertical-align: top;
+            background-image: url(images/arrow_down_gray.png);
+            cursor: pointer;
+        }
+        .mend-list-wrapper .mend-list-sub{
+            display: none;
+            border: 1px solid #e5e5e5;
+        }
+        .mend-list-wrapper .mend-list-sub .mend-list-item{
+            border-radius: 0;
+        }
+        .mend-list-wrapper .mend-list-sub .mend-list-item:hover{
+            background: #00afff;
+        }
+        .mend-list-wrapper .mend-list-sub .mend-list-item:hover span{
+            color: #fff;
+        }
+        .mend-box .mend-title a{
+            display: inline-block;
+            color: #00afff;
+            font-size: 12px;
+            line-height: 54px;
+        }
+        .mend-box .mend-title a.mend-prev{
+            margin: 0 11px;
+        }
+        .mend-box .mend-title img{
+            position: absolute;
+            top: 17px;
+            right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .mend-box .mend-info{
+            box-sizing: border-box;
+            padding: 48px 10px 40px 110px;
+            border-bottom: 1px solid #e5e5e5;
+            min-height: 360px;
+        }
+        .mend-info-item{
+            display: none;
+        }
+        .mend-box .mend-info table tr td:first-child{
+            color: #666;
+        }
+        .mend-box .mend-info table tr td{
+            padding: 9px 10px;
+        }
+        .mend-box .mend-info table tr td:last-child{
+            color: #333;
+            padding-left: 16px;
+        }
+
+        .mend-box .mend-btns{
+            text-align: center;
+            font-size: 0;
+        }
+        .mend-box .mend-btns button{
+            margin-top: 20px;
+            font-size: 14px;
+            color: #00afff;
+            width: 96px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            color: #fff;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .mend-box .mend-btns button.sure{
+            margin-right: 60px;
+            background: #00afff;
+        }
+        .mend-box .mend-btns button.back{
+            background: #a0a0a0;
+        }
+        
+        /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+        ::-webkit-scrollbar  {  
+            width: 5px;  /*滚动条宽度*/
+            height: 8px !important;  /*滚动条高度*/
+        }  
+        /*定义滚动条轨道 内阴影+圆角*/  
+        ::-webkit-scrollbar-track  {  
+            border-radius: 10px;  /*滚动条的背景区域的圆角*/
+            background-color: transparent;/*滚动条的背景颜色*/  
+        } 
+        /*定义滑块 内阴影+圆角*/  
+        ::-webkit-scrollbar-thumb  {  
+            border-radius: 10px;  /*滚动条的圆角*/
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+            background-color: #00afff;  /*滚动条的背景颜色*/
+        }    
+    </style>
+</head>
+<body>
+    11111111111111
+    <div class="mask-wrapper">
+        <div class="mend-box">
+            <div class="mend-title">
+                <p>待处理的报修投诉单共9单</p>
+                <div class="mend-list-wrapper">
+                    <div class="mend-list-item">
+                        <div class="mend-list-first">
+                            1栋1单元101<span>1分钟前</span>
+                        </div>
+                        <i></i>
+                    </div>
+                    <div class="mend-list-sub">
+                        <div class="mend-list-item">
+                            1栋1单元101<span>1分钟前</span>
+                        </div>
+                        <div class="mend-list-item">
+                            2栋1单元101<span>2分钟前</span>
+                        </div>
+                        <div class="mend-list-item">
+                            3栋1单元101<span>3分钟前</span>
+                        </div>
+                        <div class="mend-list-item">
+                            4栋1单元101<span>4分钟前</span>
+                        </div>
+                        <div class="mend-list-item">
+                            5栋1单元101<span>5分钟前</span>
+                        </div>
+                        <div class="mend-list-item">
+                            6栋1单元101<span>6分钟前</span>
+                        </div>
+                        <div class="mend-list-item">
+                            7栋1单元101<span>7分钟前</span>
+                        </div>
+                        <div class="mend-list-item">
+                            8栋1单元101<span>8分钟前</span>
+                        </div>
+                        <div class="mend-list-item">
+                            9栋1单元101<span>9分钟前</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <select name="" id="">
+                    <option value="1">1栋1单元101<span>5分钟前</span></option>
+                    <option value="2">1栋1单元101<span>5分钟前</span></option>
+                    <option value="3">1栋1单元101<span>5分钟前</span></option>
+                    <option value="4">1栋1单元101<span>5分钟前</span></option>
+                    <option value="5">1栋1单元101<span>5分钟前</span></option>
+                    <option value="6">1栋1单元101<span>5分钟前</span></option>
+                    <option value="7">1栋1单元101<span>5分钟前</span></option>
+                    <option value="8">1栋1单元101<span>5分钟前</span></option>
+                    <option value="9">1栋1单元101<span>5分钟前</span></option>
+                </select> -->
+                <a href="#" class="mend-prev">上一条</a>
+                <a href="#" class="mend-next">下一条</a>
+                <img src="images/shutdown.png" alt="close" class="close">
+            </div>
+            <div class="mend-info">
+                <table class="mend-info-item">
+                    <tr>
+                        <td>上报内容</td>
+                        <td>下水道管道破损漏水下水道管道破损漏水下水道管道破损漏水</td>
+                    </tr>
+                    <tr>
+                        <td>所属分类</td>
+                        <td>
+                            <span>管道维修</span>
+                            <span>非有偿服务</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上报房间</td>
+                        <td>1栋1单元 101</td>
+                    </tr>
+                    <tr>
+                        <td>上报人</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>上报电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                    <tr>
+                        <td>房管员</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>房管员电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                </table>
+                <table class="mend-info-item">
+                    <tr>
+                        <td>上报内容</td>
+                        <td>下水道管道破损漏水下水道管道破损漏水下水道管道破损漏水</td>
+                    </tr>
+                    <tr>
+                        <td>所属分类</td>
+                        <td>
+                            <span>管道维修</span>
+                            <span>非有偿服务</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上报房间</td>
+                        <td>2栋1单元 101</td>
+                    </tr>
+                    <tr>
+                        <td>上报人</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>上报电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                    <tr>
+                        <td>房管员</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>房管员电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                </table>
+                <table class="mend-info-item">
+                    <tr>
+                        <td>上报内容</td>
+                        <td>下水道管道破损漏水下水道管道破损漏水下水道管道破损漏水</td>
+                    </tr>
+                    <tr>
+                        <td>所属分类</td>
+                        <td>
+                            <span>管道维修</span>
+                            <span>非有偿服务</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上报房间</td>
+                        <td>3栋1单元 101</td>
+                    </tr>
+                    <tr>
+                        <td>上报人</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>上报电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                    <tr>
+                        <td>房管员</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>房管员电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                </table>
+                <table class="mend-info-item">
+                    <tr>
+                        <td>上报内容</td>
+                        <td>下水道管道破损漏水下水道管道破损漏水下水道管道破损漏水</td>
+                    </tr>
+                    <tr>
+                        <td>所属分类</td>
+                        <td>
+                            <span>管道维修</span>
+                            <span>非有偿服务</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上报房间</td>
+                        <td>4栋1单元 101</td>
+                    </tr>
+                    <tr>
+                        <td>上报人</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>上报电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                    <tr>
+                        <td>房管员</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>房管员电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                </table>
+                <table class="mend-info-item">
+                    <tr>
+                        <td>上报内容</td>
+                        <td>下水道管道破损漏水下水道管道破损漏水下水道管道破损漏水</td>
+                    </tr>
+                    <tr>
+                        <td>所属分类</td>
+                        <td>
+                            <span>管道维修</span>
+                            <span>非有偿服务</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上报房间</td>
+                        <td>5栋1单元 101</td>
+                    </tr>
+                    <tr>
+                        <td>上报人</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>上报电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                    <tr>
+                        <td>房管员</td>
+                        <td>王永旭</td>
+                    </tr>
+                    <tr>
+                        <td>房管员电话</td>
+                        <td>18843106633</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mend-btns">
+                <button class="sure">确定</button>
+                <button class="back">返回</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var idx = 0; // 控制当前显示第几个信息
+        var allLen = $('.mend-list-sub .mend-list-item').length; // 一共几条信息
+        $('.mend-info-item').eq(idx).show();
+        // 关闭按钮关闭浮层
+        $('.close').click(function(){
+            $('.mask-wrapper').hide();
+        });
+        // 二级列表显示隐藏
+        $('.mend-list-item i').click(function (e) {
+            e.stopPropagation();
+            $('.mend-list-sub').slideToggle();
+        });
+        // 选中二级列表后的操作
+        $('.mend-list-sub .mend-list-item').click(function (e) {
+            e.stopPropagation();
+            idx = $(this).index();
+            $('.mend-list-first').html($(this).html());
+            $('.mend-list-sub').slideUp();
+            $('.mend-info-item').hide();
+            $('.mend-info-item').eq(idx).show();
+        });
+        // 点击上一条下一条切换信息
+        $('.mend-next').click(function () {
+            idx += 1;
+            if(idx == allLen){
+                idx = 0;
+            }
+            $('.mend-list-first').html($('.mend-list-sub .mend-list-item').eq(idx).html());
+            $('.mend-info-item').hide();
+            $('.mend-info-item').eq(idx).show();
+        });
+        $('.mend-prev').click(function () {
+            idx -= 1;
+            if(idx == -1){
+                idx = allLen - 1;
+            }
+            $('.mend-list-first').html($('.mend-list-sub .mend-list-item').eq(idx).html());
+            $('.mend-info-item').hide();
+            $('.mend-info-item').eq(idx).show();
+        });
+        // 点击空白隐藏二级列表
+        $(document).click(function () {
+            $('.mend-list-sub').slideUp();
+        });
+
+    </script>
+</body>
+</html>

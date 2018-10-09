@@ -1,0 +1,118 @@
+
+    .city-list .top {
+      background: #f3f3f3;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+    }
+    .city-list .city-search {
+      padding: 0.1rem 0.15rem;
+      background: #fff;
+    }
+
+    .city-list .city-search .search-inner {
+      display: flex;
+      border-radius: 15px;
+      background: #f6f5f5;
+      height: 0.25rem;
+      width: 100%;
+      font-size: 0.12rem;
+    }
+
+    .city-list .city-search .search-inner select {
+      margin-right: 0.1rem;
+      padding-left: 0.25rem;
+      background-color: #f6f5f5;
+      border: none;
+      font-size: 0.12rem;
+      color: #333;
+      border-radius: 15px;
+      outline: none;
+      -webkit-appearance: none;
+      background-image: url(../images/position.png);
+      background-size: 0.12rem 0.12rem;
+      background-repeat: no-repeat;
+      background-position: left 0.1rem center;
+    }
+
+    .city-list .city-search .search-inner input {
+      box-sizing: border-box;
+      padding:  0 0.15rem 0 0.25rem;
+      flex: 1;
+      border: none;
+      background: #f6f5f5;
+      border-radius: 15px;
+      background-image: url(../images/search.png);
+      background-repeat: no-repeat;
+      background-size: 0.12rem 0.12rem;
+      background-position: 0.05rem center;
+    }
+
+    .city-list h3 {
+      margin-top: 0.05rem;
+      padding: 0 0.15rem;
+      height: 0.45rem;
+      line-height: 0.45rem;
+      font-size: 0.14rem;
+      color: #ff5050;
+      background: #fff;
+    }
+
+    .city-list ul {
+      background: #fff;
+    }
+
+    .city-list ul li {
+      padding: 0 0.15rem;
+      line-height: 0.42rem;
+    }
+
+    .city-list ul li a {
+      display: flex;
+      border-bottom: 1px solid #ececec;
+    }
+
+    .city-list ul li a span {
+      color: #333;
+      font-size: 0.14rem;
+    }
+
+    .city-list ul li a span:first-child {
+      flex: 1;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .city-list ul li a span:last-child {
+      width: 1rem;
+      text-align: right;
+    }
+
+    .city-list a.goods {
+      margin: 0.15rem 0;
+      display: block;
+      background: #fff;
+      color: #ff5050;
+      font-size: 0.12rem;
+      text-align: center;
+      height: 0.44rem;
+      line-height: 0.44rem
+    }
+
+    .city-list p.txt {
+      padding-bottom: 0.15rem;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.11rem;
+    }
+
+    .city-list .wrapper {
+      position: absolute;
+      top: 0.95rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }

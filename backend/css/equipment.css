@@ -1,0 +1,619 @@
+html{
+    position: relative;
+}
+/* 最外层 */
+.equipment {
+    box-sizing: border-box;
+    padding: 35px 40px;
+    min-width: 1520px;
+    overflow-x: auto;
+}
+
+/* btn */
+.form-group a.btn-a,
+.form-group input.btn-a {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-left: -6px;
+    padding: 0 25px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.form-group input.btn-a{
+    color: #fff;
+    background: #00afff;
+    border: none;
+    outline: none;
+}
+.btn-txt-blue {
+    color: #00afff !important;
+    background: #fff;
+    border: 1px solid #00afff;
+}
+
+/* 内容区域 + 内容区域公共 */
+.control-wrapper {
+    margin-top: 22px;
+    font-size: 14px;
+    color: #666;
+}
+.control-wrapper .control-col {
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    border-top: 8px solid #00afff;
+}
+.control-wrapper .control-col:last-child {
+    margin-right: 0;
+}
+.control-wrapper .control-col h3 {
+    background: #e0e6e9;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+/* 控件库 第一列 */
+ul.control-library {
+    box-sizing: border-box;
+    padding: 14px;
+    width: 284px;
+    font-size: 0;
+    background: #f3f7fa;
+}
+ul.control-library li {
+    padding: 42px 0 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 82px;
+    height: 66px;
+    background: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    background-position: center 14px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+ul.control-library li:nth-child(3n) {
+    margin-right: 0;
+}
+ul.control-library li.active {
+    border: 1px solid #00afff;
+}
+ul.control-library li.single-lib {
+    background-image: url(../images/single.png);
+}
+ul.control-library li.multi-lib {
+    background-image: url(../images/multi.png);
+}
+ul.control-library li.radiobox-lib {
+    background-image: url(../images/radiobox.png);
+}
+ul.control-library li.checkbox-lib {
+    background-image: url(../images/checkbox.png);
+}
+ul.control-library li.num-lib {
+    background-image: url(../images/num.png);
+}
+ul.control-library li.price-lib {
+    background-image: url(../images/price.png);
+}
+ul.control-library li.date-lib {
+    background-image: url(../images/date-lib.png);
+}
+ul.control-library li.daterange-lib {
+    background-image: url(../images/date-range.png);
+}
+ul.control-library li.contact-lib {
+    background-image: url(../images/contact.png);
+}
+ul.control-library li.department-lib {
+    background-image: url(../images/department.png);
+}
+ul.control-library li.img-lib {
+    background-image: url(../images/img.png);
+}
+ul.control-library li.attach-lib {
+    background-image: url(../images/attach.png);
+}
+
+
+/* 信息模板样式 第二列 */
+.control-pattern {
+    padding: 30px 0;
+    box-sizing: border-box;
+    width: 700px;
+    background: #f3f7fa;
+    color: #333;
+    font-size: 0;
+}
+.control-pattern .form-group {
+    padding-left: 20px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.control-pattern .form-group .form-item{
+    margin-right: 0;
+    width: 335px;
+}
+.control-pattern .form-group .form-item label{
+    display: inline-block;
+    text-align: right;
+    width: 75px;
+}
+/* 日期 */
+.control-pattern .form-group .form-item.date-item input {
+    background-image: url(../images/calendar.png);
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+}
+
+/* 添加模板区域 */
+.pattern-add-wrapper .pattern-added-item {
+    padding: 10px 0;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+/* 当前选中信息模板 */
+.control-pattern .pattern-added-item.selected {
+    background: #faf1d5;
+}
+.pattern-add-wrapper .pattern-added-item>label{
+    padding-top: 9px;
+    line-height: 22px;
+}
+.pattern-add-wrapper .pattern-added-item>label>span{
+    display: inline-block;
+    vertical-align: top;
+    width: 60px;
+    word-break: break-all;
+}
+.pattern-add-wrapper .pattern-added-item>label>input{
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+}
+.pattern-add-wrapper .form-group .form-item textarea{
+    width: 537px;
+    outline: none;
+}
+/* 关闭按钮 */
+.pattern-added-item .close {
+    position: absolute;
+    display: none;
+    right: -8px;
+    top: -8px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background-image: url(../images/red-close.png);
+    background-repeat: no-repeat;
+}
+/* 独占一行 */
+.pattern-add-wrapper .form-item.form-block{
+    display: block;
+    width: 100%;
+}
+/* 日期区间 */
+.pattern-add-wrapper .form-item.date-range .form-check-group span{
+    margin: 0 10px;
+}
+/* 选择字样 */
+.pattern-add-wrapper .form-check-group a {
+    display: inline-block;
+    margin-left: 10px;
+    color: #00afff;
+    height: 40px;
+    vertical-align: top;
+    line-height: 40px;
+}
+/* 单选多选选项设置 */
+.pattern-add-wrapper .form-item.need-options .form-check-group label{
+    width: auto;
+    line-height: 40px;
+    max-width: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.pattern-add-wrapper .form-item.need-options .form-check-group .form-check{
+    height: 40px;
+}
+.pattern-add-wrapper .form-item.need-options input{
+    display: block;
+    margin-bottom: 10px;
+}
+.pattern-add-wrapper .form-item.need-options input:last-child{
+    margin-bottom: 0;
+} 
+/* 图片和附件 */
+.pattern-add-wrapper .form-item.attach-block .form-check-group{
+    position: relative;
+}
+.pattern-add-wrapper .form-item.attach-block .form-check-group input[type="text"]{
+    padding-left: 30px;
+    width: 400px !important;
+    border: 1px dashed #dcdcdc !important;
+    cursor: pointer;
+    background-image: url(../images/addattach.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.pattern-add-wrapper .form-item.attach-block .form-check-group input[type="file"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100% !important;
+    border: 1px dashed #dcdcdc !important;
+    height: 40px;
+    box-sizing: border-box;
+    z-index: -11;
+}
+.pattern-add-wrapper .form-item.attach-block .form-check-group p{
+    margin-bottom: 5px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #999;
+}
+.pattern-add-wrapper .form-item.attach-block .form-check-group .added-img,
+.pattern-add-wrapper .form-item.attach-block .form-check-group .need-img{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.pattern-add-wrapper .form-item.attach-block .form-check-group .added-img{
+    margin-right: 20px;
+}
+.pattern-add-wrapper .form-item.attach-block .form-check-group .added-img img{
+    width: 120px;
+    height: 120px;
+}
+.pattern-add-wrapper .form-item.attach-block .form-check-group .added-img i{
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background-image: url(../images/red-close.png);
+    background-repeat: no-repeat;
+}
+.pattern-add-wrapper .form-item.attach-block .form-check-group .need-img{
+    padding: 60px 15px 0;
+    box-sizing: border-box;
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border: 1px dashed #dcdcdc;
+    font-size: 12px;
+    color: #999;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url(../images/photo.png);
+    background-repeat: no-repeat;
+    background-position: center 20px;
+}
+
+
+/* 控件设置样式 */
+.control-settings {
+    padding: 30px 20px;
+    box-sizing: border-box;
+    width: 400px;
+    background: #f3f7fa;
+    color: #333;
+}
+.control-settings .form-group .form-item{
+    margin-bottom: 10px;
+}
+.control-settings .form-group .form-item>label {
+    padding-top: 9px;
+    line-height: 22px;
+    width: 75px;
+    text-align: right;
+}
+.control-settings .form-group .form-item>label>span{
+    display: inline-block;
+    vertical-align: top;
+    width: 60px;
+}
+.control-settings .form-group .form-check-group .form-check{
+    height: 40px;
+    line-height: 40px;
+}
+.control-settings .form-group .form-check-group input[type="text"] {
+    display: block;
+    margin-bottom: 10px;
+}
+.control-settings .form-item button {
+    display: block;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+    background: #00afff;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 预览效果 */
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 9999;
+}
+.mask .hide-form{
+    visibility: hidden;
+}
+.mask .control-pattern{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    margin-left: -350px;
+    max-height: 80%;
+    width: 710px;
+    overflow-y: auto;
+}
+.mask .control-pattern .form-inline{
+    margin-bottom: 10px;
+}
+.mask .control-pattern .mask-btn{
+    margin-top: 10px;
+    text-align: center;
+}
+.mask .control-pattern .mask-btn a{
+    vertical-align: top;
+}
+
+
+/* 打印设备页面 */
+.print-equipment {
+    box-sizing: border-box;
+    width: 1400px;
+    padding: 0 35px;
+}
+.print-equipment .p-tips {
+    margin: 0 auto 30px;
+    font-size: 15px;
+    height: 40px;
+    width: 400px;
+    text-align: center;
+    line-height: 40px;
+    color: #fe7c7c;
+    background: #fff5d8;
+}
+.print-equipment .form-group .form-item input[type="text"].w100 {
+    margin: 0 5px;
+    width: 100px;
+}
+.print-equipment .form-group .btn-txt-fff {
+    width: 180px;
+    vertical-align: top;
+    color: #fff;
+    background: #00afff;
+    border: none;
+    outline: none;
+}
+.print-equipment .form-group .file-img{
+    width: 10px;
+    position: relative;
+    left: 0;
+}
+.print-equipment .print-template {
+    margin-bottom: 30px;
+    border-top: 8px solid #00afff;
+    background: #f3f7fa;
+}
+.print-equipment .print-template h3 {
+    padding-left: 22px;
+    height: 34px;
+    line-height: 34px;
+}
+.print-equipment .print-template h3 a {
+    color: #00afff;
+    font-size: 15px;
+}
+
+.form-wrapper{
+    height: 560px;
+    background: #e0e6e9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.form-wrapper .print-inner-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.form-wrapper .print-inner-wrapper img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.form-wrapper .print-inner-wrapper .drag-item-wrapper {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    overflow: hidden;
+}
+
+/* 自定义样式 */
+.drag-item-wrapper .customize {
+    width: 200px;
+    height: 100px;
+    cursor: move;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    border: 1px solid #CCCCCC;
+    -webkit-box-shadow: 10px 10px 25px #ccc;
+    -moz-box-shadow: 10px 10px 25px #ccc;
+    box-shadow: 10px 10px 25px #ccc;
+}
+
+.drag-item-wrapper .customize span {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.drag-item-wrapper .customize .coor {
+    width: 10px;
+    height: 10px;
+    overflow: hidden;
+    cursor: se-resize;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #09C;
+}
+/* 二维码 */
+.drag-item-wrapper img.code{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+}
+/* 文本 */
+.drag-item-wrapper .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 190px;
+    height: 40px;
+}
+
+/* solid */
+.drag-item-wrapper .solid{
+    position: absolute;
+    box-sizing: border-box;
+    width: 100px;
+    border-top: 4px solid green;
+    height: 4px;
+}
+.drag-item-wrapper .turn i{
+    position: absolute;
+    top: -5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%; 
+    background: #00afff;
+}
+.drag-item-wrapper .turn i.prev{
+    left: -4px;
+}
+.drag-item-wrapper .turn i.next{
+    right: -4px;
+}
+/* dashed */
+.drag-item-wrapper .dashed{
+    position: absolute;
+    box-sizing: border-box;
+    width: 100px;
+    border-top: 4px dashed red;
+    height: 4px;
+}
+
+/* auto */
+.drag-item-wrapper .auto{
+    box-sizing: border-box;
+    width: 200px;
+    height: 100px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #333;
+}
+
+
+.print-btns {
+    text-align: center;
+    font-size: 0;
+}
+.print-btns input.btn-a{
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: -6px;
+    padding: 0 25px;
+    height: 40px;
+    vertical-align: top;
+    line-height: 40px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    background: #00afff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}   
+.print-btns a{
+    display: inline-block;
+    margin-right: 20px;
+    box-sizing: border-box;
+    width: 120px;
+    text-align: center;
+    vertical-align: top;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.print-btns a:last-child{
+    margin-right: 0;
+}
+.print-btns a.green{
+    color: #fff;
+    background: #00d299;
+    border: none;
+}
+.print-btns a.blue{
+    color: #fff;
+    background: #04a9ff;
+    border: none;
+}
+
+.mask .view-form {
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 80%;
+    background: #fff;
+}
+.mask .print-btns {
+    margin-top: 30px;
+}

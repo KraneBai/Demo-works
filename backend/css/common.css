@@ -1,0 +1,226 @@
+/* 重置 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+
+/* 内联表单自定义开始 */
+.form-inline .form-item {
+    display: inline-block;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+.form-group .form-item {
+    min-height: 40px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+/* 文本框 */
+
+.form-group .form-item textarea {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    resize: none;
+    height: 60px;
+    width: 280px;
+    color: #999;
+    line-height: 22px;
+    border: 1px solid #e5e5e5;
+}
+
+.form-group .form-item>label {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    line-height: 40px;
+}
+
+/* 下拉框 */
+
+
+.form-group .form-item input[type="text"],
+.form-group .select-list span {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e5e5e5;
+}
+
+.form-group .select-list {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+.form-group .select-list>input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-group .select-list span {
+    cursor: pointer;
+    background-color: #fff;
+    background-image: url(../images/arrow_down_gray.png);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 10px 6px;
+}
+
+
+
+.form-group .select-list ul {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+    font-size: 0;
+    z-index: 9999;
+}
+
+.form-group .select-list ul li {
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.form-group .select-list ul li:hover {
+    color: #00afff;
+}
+
+/* 单选多选 */
+
+.form-group .form-check-group {
+    display: inline-block;
+}
+
+.form-group .form-check {
+    box-sizing: border-box;
+    padding-left: 30px;
+    position: relative;
+    vertical-align: center;
+}
+
+.form-group .form-check input[type="checkbox"],
+.form-group .form-check input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+}
+
+.form-group .form-check label {
+    cursor: pointer;
+}
+
+.form-group .form-check label::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    border-radius: 50%;
+}
+
+.form-group .form-check label::after {
+    display: none;
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 3px;
+    transform: translate3d(0, -50%, 0);
+    width: 14px;
+    height: 14px;
+    background: #04a9ff;
+    border-radius: 50%;
+}
+.form-group .form-check input[type="checkbox"] + label::before {
+    border-radius: 0;
+}
+
+.form-group .form-check input[type="checkbox"] + label::after {
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+}
+
+.form-group .form-check input[type="checkbox"]:checked+label::after,
+.form-group .form-check input[type="radio"]:checked+label::after {
+    display: block;
+}
+.form-group .form-check input[type="checkbox"]:checked+label::after,
+.form-group .form-check input[type="radio"]:checked+label::after {
+    display: block;
+}
+
+
+/* 日期 */
+.form-group .form-item.date-item input {
+    background-image: url(../images/calendar.png);
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+}
+/* 内联表单自定义结束 */

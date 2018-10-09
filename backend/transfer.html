@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>库存管理-调拨</title>
+  <link rel="stylesheet" href="css/attendance.css">
+  <link rel="stylesheet" href="css/transfer.css">
+</head>
+
+<body>
+  <div class="attendance-wrapper">
+
+    <div class="inline-group">
+      <div class="attendance-item clearfix">
+        <span class="item-tit">出库仓库</span>
+        <div class="details">
+          <select>
+            <option value="楼里楼外">楼里楼外</option>
+            <option value="楼里楼外1">楼里楼外1</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="attendance-item clearfix">
+        <span class="item-tit">出库时间</span>
+        <div class="details">
+          <input type="text" value="">
+        </div>
+      </div>
+
+      <div class="attendance-item clearfix">
+        <a class="btn out" style="margin: 0 20px 0 40px; background: #00afff; color: #fff">确定出库</a>
+        <a class="btn">出库历史</a>
+      </div>
+    </div>
+
+    <div class="inline-group">
+      <div class="attendance-item clearfix">
+        <span class="item-tit">出库到</span>
+        <div class="details">
+          <select>
+            <option value="楼里楼外">优狐总库</option>
+            <option value="楼里楼外1">楼里总库1</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="attendance-item clearfix">
+        <span class="item-tit">出库</span>
+        <div class="details">
+          <select>
+            <option value="楼里楼外">正常出库</option>
+            <option value="楼里楼外1">异常出库</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="attendance-item clearfix">
+        <span class="item-tit">备注</span>
+        <div class="details">
+          <input type="text" value="">
+        </div>
+      </div>
+
+      <div class="attendance-item clearfix">
+        <span class="item-tit">出库</span>
+        <div class="details">
+          <select>
+            <option value="楼里楼外">正常出库</option>
+            <option value="楼里楼外1">异常出库</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="attendance-item clearfix" style="margin-bottom: 0;">
+      <div class="details table-details">
+        <div class="table-wrapper added-wrapper">
+          <table cellpadding="0" cellspacing="0">
+            <thead>
+              <tr>
+                <th class="wid80">操作</th>
+                <th>工作仓库-库位</th>
+                <th>产品名称</th>
+                <th>分类</th>
+                <th>规格</th>
+                <th>供应商</th>
+                <th>剩余库存</th>
+                <th>出库数量</th>
+                <th>出库价格</th>
+                <th>生产日期</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="wid80">
+                  <i class="remove-tr"></i>
+                </td>
+                <td>优狐仓库-东1</td>
+                <td>QQ星</td>
+                <td>乳饮</td>
+                <td>12盒每箱</td>
+                <td>供应链</td>
+                <td>100</td>
+                <td class="red">50</td>
+                <td>10</td>
+                <td>
+                  <select>
+                    <option value="">2018-10-01</option>
+                    <option value="">2018-10-01</option>
+                    <option value="">2018-10-01</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="wid80">
+                  <i class="remove-tr"></i>
+                </td>
+                <td>优狐仓库-东1</td>
+                <td>QQ星</td>
+                <td>乳饮</td>
+                <td>12盒每箱</td>
+                <td>供应链</td>
+                <td>100</td>
+                <td>50</td>
+                <td>10</td>
+                <td>
+                  <select>
+                    <option value="">2018-10-01</option>
+                    <option value="">2018-10-01</option>
+                    <option value="">2018-10-01</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="wid80">
+                  <i class="remove-tr"></i>
+                </td>
+                <td>优狐仓库-东1</td>
+                <td>QQ星</td>
+                <td>乳饮</td>
+                <td>12盒每箱</td>
+                <td>供应链</td>
+                <td>100</td>
+                <td>50</td>
+                <td>10</td>
+                <td>
+                  <select>
+                    <option value="">2018-10-01</option>
+                    <option value="">2018-10-01</option>
+                    <option value="">2018-10-01</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="choose-goods">
+            <a href="javascript:;" class="click-a">选择商品</a>
+            <input type="text" placeholder="输入要搜索的商品名称">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attendance-item clearfix">
+      <div class="details new-details" style="margin-left: 175px;">
+        <div class="thead">
+          <span class="wid80">选择</span>
+          <span>产品名称</span>
+          <span>产品条码</span>
+          <span>当前库存</span>
+          <span>规格</span>
+        </div>
+        <div class="tbody">
+          <div class="tbody-item">
+            <span class="wid80">
+              <input type="checkbox" id="1"><label for="1"></label>
+            </span>
+            <span>QQ星</span>
+            <span>0000001</span>
+            <span>100</span>
+            <span>50</span>
+          </div>
+          <div class="tbody-item">
+            <span class="wid80">
+              <input type="checkbox" id="2"><label for="2"></label>
+            </span>
+            <span>QQ星</span>
+            <span>0000001</span>
+            <span>100</span>
+            <span>50</span>
+          </div>
+          <div class="tbody-item">
+            <span class="wid80">
+              <input type="checkbox" id="3"><label for="3"></label>
+            </span>
+            <span>QQ星</span>
+            <span>0000001</span>
+            <span>100</span>
+            <span>50</span>
+          </div>
+          <div class="tbody-item">
+            <span class="wid80">
+              <input type="checkbox" id="4"><label for="4"></label>
+            </span>
+            <span>QQ星</span>
+            <span>0000001</span>
+            <span>100</span>
+            <span>50</span>
+          </div>
+          <div class="tbody-item">
+            <span class="wid80">
+              <input type="checkbox" id="5"><label for="5"></label>
+            </span>
+            <span>QQ星</span>
+            <span>0000001</span>
+            <span>100</span>
+            <span>50</span>
+          </div>
+          <div class="tbody-item">
+            <span class="wid80">
+              <input type="checkbox" id="6"><label for="6"></label>
+            </span>
+            <span>QQ星</span>
+            <span>0000001</span>
+            <span>100</span>
+            <span>50</span>
+          </div>
+        </div>
+        <div class="add-goods">
+          <a class="click-a" href="javascript:;">新增商品</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="popup-wrapper">
+      <div class="popup-inner">
+        <h2>选择产品<i class="close-popup"></i></h2>
+        <div class="popup-content">
+          <div class="tree">
+            <div class="tree-wrapper">
+              <p>treetreetreetreetreetreetreetreetreetreetreetreetreetree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+              <p>tree</p>
+            </div>
+
+          </div>
+          <div class="products">
+            <div class="header">
+              <span>仓库</span>
+              <input type="text" value="饲料仓">
+              <span>零库存</span>
+              <input type="text" value="全部">
+              <input type="text" placeholder="输入产品名称关键字" class="submit">
+              <input type="submit" value="查询">
+              <p>已选<strong>0</strong>个产品</p>
+            </div>
+            <div class="product-list">
+              <div class="attendance-item clearfix" style="margin-bottom: 0;">
+                <div class="details table-details" style="margin-left: 0;">
+                  <div class="table-wrapper">
+                    <table cellpadding="0" cellspacing="0">
+                      <thead>
+                        <tr class="checked-a">
+                          <th style="min-width: 30px; cursor: pointer;" class="choose-a">全选</th>
+                          <th>产品图片</th>
+                          <th>产品名称</th>
+                          <th>产品条码</th>
+                          <th>产品分类</th>
+                          <th>属性</th>
+                          <th>单位</th>
+                          <th>备注</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="min-width: 30px;">
+                            <input type="checkbox" id="12"><label for="12"></label>
+                          </td>
+                          <td>优狐仓库-东1</td>
+                          <td>QQ星</td>
+                          <td>乳饮</td>
+                          <td>12盒每箱</td>
+                          <td>供应链</td>
+                          <td>100</td>
+                          <td class="red">50</td>
+                        </tr>
+                        <tr>
+                          <td style="min-width: 30px;">
+                            <input type="checkbox" id="13"><label for="13"></label>
+                          </td>
+                          <td>优狐仓库-东1</td>
+                          <td>QQ星</td>
+                          <td>乳饮</td>
+                          <td>12盒每箱</td>
+                          <td>供应链</td>
+                          <td>100</td>
+                          <td>50</td>
+                        </tr>
+                        <tr>
+                          <td class="wid80">
+                            <input type="checkbox" id="14"><label for="14"></label>
+                          </td>
+                          <td>优狐仓库-东1</td>
+                          <td>QQ星</td>
+                          <td>乳饮</td>
+                          <td>12盒每箱</td>
+                          <td>供应链</td>
+                          <td>100</td>
+                          <td>50</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="product-pagination">
+                  <span>第0-0条共0条</span>
+                  <select>
+                    <option value="">每页显示15条</option>
+                    <option value="">每页显示20条</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup-footer">
+          <a href="" class="sure">确定</a>
+          <a href="" class="cancel">取消</a>
+        </div>
+      </div>
+
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script>
+      $('.close').click(function () {
+        $('.popup-wrapper').hide();
+        $('.pop-date').hide();
+        $('.pop-network').hide();
+        $('.pop-location').hide();
+      });
+
+      // 移除当前选择的商品
+      $(document).on('click', '.remove-tr', function () {
+        $(this).parents('tr').remove();
+      });
+
+      // 选中商品 直接添加商品
+      $(document).on('click', '.new-details .tbody-item input', function () {
+        if ($(this).is(':checked')) {
+          var str = '';
+          str +=
+            '<tr>\
+                <td class="wid80">\
+                  <i class="remove-tr"></i>\
+                </td>\
+                <td>优狐仓库-东1</td>\
+                <td>QQ星</td>\
+                <td>乳饮</td>\
+                <td>12盒每箱</td>\
+                <td>供应链</td>\
+                <td>100</td>\
+                <td class="red">50</td>\
+                <td>10</td>\
+                <td>\
+                  <select>\
+                    <option value="">2018-10-01</option>\
+                    <option value="">2018-10-01</option>\
+                    <option value="">2018-10-01</option>\
+                  </select>\
+                </td>\
+              </tr>';
+          $('.added-wrapper table').append(str)
+        }
+      });
+
+      // 选择商品弹窗显示隐藏
+      $(document).on('click', '.choose-goods a', function () {
+        $('.popup-wrapper').show();
+      });
+      $(document).on('click', '.close-popup', function () {
+        $('.popup-wrapper').hide();
+      });
+
+      // 全选
+      $(document).on('click', '.choose-a', function () {
+        var inpsLen = $('.product-list .table-wrapper input').length;
+        var inpsCheckedLen = $('.product-list .table-wrapper input:checked').length;
+        if (inpsLen === inpsCheckedLen) {
+          $('.product-list .table-wrapper input').prop('checked', false);
+        } else {
+          $('.product-list .table-wrapper input').prop('checked', true);
+        } 
+      });
+    </script>
+</body>
+
+</html>

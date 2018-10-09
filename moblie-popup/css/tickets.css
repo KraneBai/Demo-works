@@ -1,0 +1,125 @@
+body,
+html {
+    width: 100%;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  {  
+    width: 6px;  /*滚动条宽度*/
+    height: 16px;  /*滚动条高度*/
+}  
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  {  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 10px;  /*滚动条的背景区域的圆角*/
+}   
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  {  
+    border-radius: 10px;  /*滚动条的圆角*/
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+} 
+
+body {
+    min-height: 100%;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+
+.tickets-wrapper {
+    position: absolute;
+    padding: 1.3rem 0.2rem 0.35rem;
+    box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 2.84rem;
+    min-height: 2.6rem;
+    color: #333;
+    font-size: 0.12rem;
+    background: linear-gradient(#ff4f31, #ff305b);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.top-logo {
+    position: absolute;
+    left: -0.25rem;
+    top: -0.3rem;
+    width: 3.24rem;
+    height: 2.6rem;
+    background-image: url(../images/mask.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.tickets-wrapper i {
+    position: absolute;
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    left: 50%;
+    margin-left: -0.15rem;
+    top: 100%;
+    margin-top: 0.34rem;
+    background-image: url(../images/closeBtn.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+ul {
+    max-height: 2.7rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: linear-gradient(#ff4045, #ff305b);
+}
+
+.tickets-wrapper ul li {
+    display: flex;
+    margin-bottom: 0.1rem;
+    box-sizing: border-box;
+    min-height: 0.75rem;
+    padding: 0.05rem 0.1rem 0.05rem 0;
+    align-items: center;
+    background-image: url(../images/ticket-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.tickets-wrapper ul li .price {
+    width: 33%;
+    text-align: center;
+    border-right: 1px dotted #e7e7e7;
+}
+
+.tickets-wrapper ul li .price div {
+    color: #e85b4d;
+    font-size: 0.25rem;
+}
+
+.tickets-wrapper ul li .price span {
+    font-size: 0.1rem;
+}
+
+.tickets-wrapper ul li .name {
+    padding-left: 0.1rem;
+    flex: 1;
+}
+
+.tickets-wrapper ul li .name h2 {
+    font-size: 0.14rem;
+    font-weight: bold;
+}
+
+.tickets-wrapper ul li .btn button {
+    padding: 0.05rem 0.1rem;
+    background: #ffcd4d;
+    color: #7a5f1c;
+    border-radius: 20px;
+    font-size: 0.1rem;
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <title>添加责任人</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body, html{
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+        /* 重置 */
+        select {
+            /* 很关键：将默认的select选择框样式清除 */
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            /*在选择框的最右侧中间显示小箭头图片*/
+            background: url("images/arrow_down_gray.png") no-repeat scroll 240px center transparent;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul, li{
+            list-style: none;
+        }
+        /* 浮层内容区域 */
+        .mask-wrapper{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .6);
+            z-index: 999;
+        }
+        .respon-box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -340px;
+            margin-top: -247px;
+            width: 680px;
+            height: 494px;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .respon-box .close{
+            background: #eee;
+            height: 38px;
+            text-align: right;
+        }
+        .respon-box .close img{
+            margin-top: 10px;
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .respon-box .res-choose{
+            padding: 40px 70px;
+            font-size: 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .respon-box .res-choose .res-choose-con{
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 16px 3px 16px 16px;
+            height: 300px;
+            width: 240px;
+            border: 1px solid #e5e5e5;
+            font-size: 13px;
+        }
+        .respon-box .res-choose .con-left{
+            margin-right: 60px;
+            vertical-align: top;
+        }
+        .respon-box .res-choose .res-choose-con h2{
+            margin-bottom: 15px;
+            padding-left: 10px;
+            font-size: 14px;
+            color: #00afff;
+            position: relative;
+        }
+        .respon-box .res-choose .res-choose-con h2::before{
+            margin-right: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: 3px;
+            height: 100%;
+            background: #00afff;
+        }
+
+        .respon-box .con-left .choose-all{
+            padding-left: 0;
+            color: #00afff;
+            background-image: none;
+            min-height: 30px;
+            line-height: 30px;
+        }
+        .respon-box .res-choose-con .choose-one{
+            height: 220px;
+            overflow-y: auto;
+        }
+        .respon-box .res-choose-con li{
+            position: relative;
+            min-height: 30px;
+            line-height: 30px;
+        }
+        .respon-box .res-choose-con .choose-one > li{
+            padding-right: 5px;
+        }
+        .respon-box .con-right > ul > li{
+            padding-left: 24px; 
+        }
+        .respon-box .con-right > ul > li i{
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            background-image: url(images/delet.png);
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .respon-box .con-left input{
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .respon-box .con-left .choose-one > li,
+        .respon-box .con-left .choose-two > li,
+        .respon-box .con-left .choose-three > li{
+            position: relative;
+            padding-left: 24px;
+        }
+        .respon-box .con-left .choose-one > li i,
+        .respon-box .con-left .choose-two > li i{
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+        }
+        .respon-box .con-left .choose-one > li i.slide-down,
+        .respon-box .con-left .choose-two > li i.slide-down{
+            top: 13px;
+            left: 3px;
+            width: 10px;
+            height: 6px;
+            background-image: url(images/arrow_down_gray.png);
+        }
+        .respon-box .con-left .choose-one > li i.slide-up,
+        .respon-box .con-left .choose-two > li i.slide-up{
+            top: 10px;
+            left: 5px;
+            width: 6px;
+            height: 10px;
+            background-image: url(images/arrow_right_gray.png);
+        }
+
+        .respon-box .res-btns{
+            text-align: center;
+            font-size: 0;
+        }
+        .respon-box .res-btns button{
+            margin-top: 20px;
+            font-size: 14px;
+            color: #00afff;
+            width: 96px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            color: #fff;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        .respon-box .res-btns button.sure{
+            margin-right: 60px;
+            background: #00afff;
+        }
+        .respon-box .res-btns button.back{
+            background: #a0a0a0;
+        }
+
+        /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+        ::-webkit-scrollbar  {  
+            width: 5px;  /*滚动条宽度*/
+            height: 8px !important;  /*滚动条高度*/
+        }  
+        /*定义滚动条轨道 内阴影+圆角*/  
+        ::-webkit-scrollbar-track  {  
+            border-radius: 10px;  /*滚动条的背景区域的圆角*/
+            background-color: transparent;/*滚动条的背景颜色*/  
+        } 
+        /*定义滑块 内阴影+圆角*/  
+        ::-webkit-scrollbar-thumb  {  
+            border-radius: 10px;  /*滚动条的圆角*/
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+            background-color: #00afff;  /*滚动条的背景颜色*/
+        }    
+    </style>
+</head>
+<body>
+    11111111111111
+    <div class="mask-wrapper">
+        <div class="respon-box">
+            <div class="close"><img src="images/shutdown.png" alt="close"></div>
+            <div class="res-choose">
+                <div class="res-choose-con con-left">
+                    <h2>选择责任人</h2>
+                    <p class="choose-all"><input type="checkbox">全选</p>
+                    <ul class="choose-one">
+                        <li><i class="slide-down"></i><input type="checkbox">优狐物业
+                            <ul class="choose-two">
+                                <li><i class="slide-down"></i><input type="checkbox">技术部
+                                    <ul class="choose-three">
+                                        <li><input type="checkbox">王永旭1</li>
+                                        <li><input type="checkbox">王永旭2</li>
+                                        <li><input type="checkbox">王永旭3</li>
+                                    </ul>
+                                </li>
+                                <li><i class="slide-down"></i><input type="checkbox">运营部
+                                    <ul class="choose-three">
+                                        <li><input type="checkbox">王永旭1</li>
+                                        <li><input type="checkbox">王永旭2</li>
+                                        <li><input type="checkbox">王永旭3</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><i class="slide-down"></i><input type="checkbox">优狐物业6
+                            <ul class="choose-two">
+                                <li><i class="slide-down"></i><input type="checkbox">技术部2
+                                    <ul class="choose-three">
+                                        <li><input type="checkbox">王永旭1</li>
+                                        <li><input type="checkbox">王永旭2</li>
+                                        <li><input type="checkbox">王永旭3</li>
+                                    </ul>
+                                </li>
+                                <li><i class="slide-down"></i><input type="checkbox">运营部2
+                                    <ul class="choose-three">
+                                        <li><input type="checkbox">王永旭1</li>
+                                        <li><input type="checkbox">王永旭2</li>
+                                        <li><input type="checkbox">王永旭3</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="res-choose-con con-right">
+                    <h2>已选</h2>
+                    <ul class="choose-one con-choosen">
+                        <li><i></i>技术部1</li>
+                        <li><i></i>技术部2</li>
+                        <li><i></i>技术部3</li>
+                        <li><i></i>技术部4</li>
+                        <li><i></i>技术部5</li>
+                        <li><i></i>技术部6</li>
+                        <li><i></i>技术部7</li>
+                        <li><i></i>技术部8</li>
+                        <li><i></i>技术部9</li>
+                        <li><i></i>技术部10</li>
+                        <li><i></i>技术部11</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="res-btns">
+                <button class="sure">确定</button>
+                <button class="back">返回</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 关闭此浮层
+        $('.close').click(function(){
+            $('.mask-wrapper').hide();
+        });
+        // 右边列表移除选侦破那个
+        $('.con-choosen i').click(function () {
+            $(this).parent().remove();
+        });
+
+        // 一级列表收起
+        $('.choose-one > li i').click( function () {
+            console.log($(this).attr('class'))
+            if($(this).attr('class') == 'slide-down'){
+                $(this).attr('class', 'slide-up');
+            }else{
+                $(this).attr('class', 'slide-down');
+            }
+            $(this).parent().find('.choose-two').slideToggle();
+        }); 
+        // 二级列表收起
+        $('.choose-two > li i').click( function () {
+            $(this).parent().find('.choose-three').slideToggle();
+        }); 
+
+        // 全选
+        $('.choose-all input').click(function () {
+            if($(this).prop("checked")){
+                $(':checkbox').prop('checked', true);
+            }else{
+                $(':checkbox').prop('checked', false);
+            }
+        });
+        // 一级列表全选
+        $('.choose-one > li input').click( function () {
+            if($(this).prop("checked")){
+                $(this).parent().find('.choose-two input').prop('checked', true);
+            }else{
+                $(this).parent().find('.choose-two input').prop('checked', false);
+            }
+            
+        }); 
+        // 二级列表全选
+        $('.choose-two > li input').click( function () {
+            if($(this).prop("checked")){
+                $(this).parent().find('.choose-three input').prop('checked', true);
+            }else{
+                $(this).parent().find('.choose-three input').prop('checked', false);
+            }
+            
+        }); 
+    </script>
+</body>
+</html>

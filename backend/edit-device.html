@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>编辑设备</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/editdevice.css">
+</head>
+
+<body>
+  <div class="edit-device">
+
+    <form action="">
+      <div class="form-group">
+        <div class="form-item">
+          <label>选择安装位置：</label>
+          <input type="text" />
+          <span>测试小区</span>
+          <button>选择安装位置</button>
+        </div>
+        <div class="form-item">
+          <label>设备编码：</label>
+          <input type="text" />
+          <strong>*</strong>
+        </div>
+        <div class="form-item">
+          <label>设备规格：</label>
+          <input type="text" />
+          <strong>*</strong>
+        </div>
+        <div class="form-item">
+          <label>设备：</label>
+          <input type="text" />
+          <strong>*</strong>
+        </div>
+        <div class="form-item">
+          <label>安装时间：</label>
+          <input type="text" />
+          <strong>*</strong>
+        </div>
+        <div class="form-item">
+          <label>设备分类：</label>
+          <div class="select-list">
+            <span>分类-手机</span>
+            <input type="text">
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-item">
+          <label>图片：</label>
+          <div class="form-check-group">
+            <input type="text" class="upload-file" placeholder="上传文件" readonly="" onclick="$('#submitFile').click();">
+            <input type="file" id="submitFile">
+          </div>
+        </div>
+        <div class="form-item multi-box">
+          <label>多选框：</label>
+          <div>
+            <span>
+              <input type="checkbox" />hhhaha</span>
+            <span>
+              <input type="checkbox" />hhhaha</span>
+          </div>
+        </div>
+        <div class="form-item multi-box">
+          <label>单选框：</label>
+          <div>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+            <span>
+              <input type="radio" />hhhaha</span>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script>
+    // 下拉选框
+    $(document).on('click', '.select-list span', function (e) {
+      e.stopPropagation();
+      $(this).siblings('ul').slideToggle();
+    });
+    $(document).click(function (e) {
+      $('.select-list ul').slideUp();
+    });
+    // 赋值下拉选框
+    $(document).on('click', '.select-list ul li', function (e) {
+      $(this).parents('.select-list').find('span').html($(this).html());
+      $('.select-list ul').slideUp();
+      $(this).parents('.select-list').find('input').val($(this).html()).attr('data-val', $(this).html());
+    });
+
+    // 上传文件后的文件内容
+    $(document).on("change", "#submitFile", function () {
+      console.log($('#submitFile')[0].files[0]);
+      $('.upload-file').attr('placeholder', $('#submitFile')[0].files[0].name).css({
+        'padding-left': '10px',
+        'background-image': 'none'
+      });
+      // if ($('#submitFile')[0].files[0]) {
+      //   var reader = new FileReader();
+      //   reader.onload = function () {
+      //     console.log(this.result); // 文件内容 
+      //   };
+      //   reader.readAsText($('#submitFile')[0].files[0], 'utf-8');
+      // }
+    })
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>人事动态</title>
+    <link rel="stylesheet" href="css/resource.css">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="resource">
+        <div class="btns">
+            <button class="blue">人事分析</button>
+            <button class="">入职记录</button>
+            <button class="">离职记录</button>
+        </div>
+        <div class="select-wrapper">
+            <div class="select-item">
+                查看范围：
+                <div class="select-box">
+                    <span>全部</span>
+                    <ul>
+                        <li>AAAAA</li>
+                        <li>BBBBB</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="select-item">
+                岗位：
+                <div class="select-box">
+                    <span>全部</span>
+                    <ul>
+                        <li>AAAAA</li>
+                        <li>BBBBB</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="employees-wrapper">
+            <div class="employers">
+                <div class="cur-employee">
+                    <h4>当前在职员工共50人</h4>
+                    <div class="ul-wrap">
+                        <ul>
+                            <li>
+                                <p>技术部</p>
+                                <span class="blue">20</span>
+                            </li>
+                            <li>
+                                <p>运营部</p>
+                                <span class="green">20</span>
+                            </li>
+                            <li>
+                                <p>综合部</p>
+                                <span class="orange">20</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ul-wrap">
+                        <ul>
+                            <li>
+                                <p>本周入职</p>
+                                <span class="blue">20</span>
+                            </li>
+                            <li>
+                                <p>本周离职</p>
+                                <span class="green">20</span>
+                            </li>
+                            <li>
+                                <p>本月入职</p>
+                                <span class="blue">20</span>
+                            </li>
+                            <li>
+                                <p>本月离职</p>
+                                <span class="green">20</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 饼图 -->
+                <div class="pie">
+                    <div id="mainpie" style="width: 600px;height:400px;"></div>
+                </div>
+            </div>
+            <!-- 柱状图 -->
+            <div class="bar">
+                <h4>司领分布</h4>
+                <div id="mainbar" style="width: 800px;height:400px;"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <script>
+        $('.select-box').click(function (e) {
+            e.stopPropagation();
+            $(this).find('ul').slideToggle();
+        });
+        $(document).click(function () {
+            $('.select-box').find('ul').slideUp();
+        });
+        $('.select-box ul li').click(function (e) {
+            e.stopPropagation();
+            $(this).parents('.select-box').find('span').html($(this).html());
+            $(this).parents('.select-box').find('ul').slideToggle();
+        });
+    </script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var barChart = echarts.init(document.getElementById('mainbar'));
+
+        // 指定图表的配置项和数据
+        var baroption = {
+            title: {
+                text: '人\n数',
+                top: '50%',
+                left: '0',
+                textStyle: {
+                    color: '#666',
+                    fontWeight: 'normal',
+                    fontSize: 12
+                }
+            },
+            tooltip: {
+
+            },
+            xAxis: {
+                data: ['1年以下', '1-3年', '3-5年', { // 特殊类的名字设置
+                    value: '5-10年',
+                    // 突出周一
+                    textStyle: {
+                        color: '#666'
+                    }
+                }, {
+                    value: '10年以上',
+                    // 突出周一
+                    textStyle: {
+                        color: '#666'
+                    }
+                }],
+                axisLine: { // 轴线颜色
+                    lineStyle: {
+                        color: '#ccd6eb'
+                    }
+                },
+                axisLabel: { // 轴线文字颜色
+                    color: '#003399',
+                    fontWeight: 'bold'
+                }
+            },
+            yAxis: {
+                axisLine: {
+                    lineStyle: {
+                        color: 'transparent'
+                    }
+                },
+                axisLabel: {
+                    color: '#666'
+                }
+            },
+            series: [{
+                name: '人数百分比',
+                type: 'bar',
+                data: [{
+                    value: 56.3,
+                    itemStyle: {
+                        color: '#7cb5ec'
+                    }
+                }, {
+                    value: 24.0,
+                    itemStyle: {
+                        color: '#434348'
+                    }
+                }, {
+                    value: 10.4,
+                    itemStyle: {
+                        color: '#90ed7d'
+                    }
+                }, {
+                    value: 4.8,
+                    itemStyle: {
+                        color: '#f7a35c'
+                    },
+                    label: {
+                        color: '#000'
+                    }
+                }, {
+                    value: 0.2,
+                    label: {
+                        color: '#000'
+                    }
+                }],
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top',
+                        color: '#003399',
+                        fontWeight: 'bold',
+                        formatter: '{c}%'
+                    },
+                },
+                barWidth: 70
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        barChart.setOption(baroption);
+
+        // 基于准备好的dom，初始化echarts实例
+        var pieChart = echarts.init(document.getElementById('mainpie'));
+
+        // 指定图表的配置项和数据
+        var pieoption = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
+            },
+            series: [{
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        formatter: '{b}: {c}%',
+                        color: '#333',
+                        show: true
+                    },
+                    // emphasis: {
+                    //     show: true,
+                    //     textStyle: {
+                    //         fontSize: '30',
+                    //         fontWeight: 'bold'
+                    //     }
+                    // }
+                },
+                labelLine: {
+                    normal: {
+                        show: true,
+                        length: 20,
+                        length2: 50,
+                        lineStyle: {
+                            color: '#5faee3'
+                        },
+                        // smooth: 0.3
+                    }
+                },
+                data: [
+                    {
+                        value: 10,
+                        name: '实习',
+                        itemStyle: {
+                            color: '#00d299'
+                        }
+                    },
+                    {
+                        value: 20,
+                        name: '兼职',
+                        itemStyle: {
+                            color: '#ffba24'
+                        }
+                    },
+                    {
+                        value: 5,
+                        name: '其他',
+                        labelLine: {
+                            length: 40,
+                            length2: 0,
+                        },
+                        itemStyle: {
+                            color: '#ef704d'
+                        }
+                    },
+                    {
+                        value: 20,
+                        name: '全职',
+                        itemStyle: {
+                            color: '#04a9ff'
+                        }
+                    }
+                ]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        pieChart.setOption(pieoption);
+    </script>
+</body>
+
+</html>

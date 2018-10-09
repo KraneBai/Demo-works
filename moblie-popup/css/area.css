@@ -1,0 +1,83 @@
+.mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+}
+.mask .select-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 90%;
+  height: 80%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 0.16rem;
+  overflow-x: hidden;
+}
+.mask .select-area h1 {
+  padding-left: 0.2rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background: #f3f3f3;
+  color: #5c5c5c;
+  font-size: 0.16rem;
+}
+.mask .select-area h1 i {
+  position: absolute;
+  right: 0.15rem;
+  color: #af6875;
+  font-size: 0.24rem;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.mask nav {
+  padding: 0.15rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+.mask nav span {
+  display: inline-block;
+  margin-right: 0.1rem;
+  width: 0.76rem;
+  color: #333;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  border-radius: 5px;
+}
+.mask nav span.active {
+  border: 1px solid #ff5050;
+  color: #ff5050;
+}
+.mask section {
+  padding: 0 0.15rem;
+  display: flex;
+}
+.mask section aside {
+  padding: 0.15rem 0;
+  border-top: 1px solid #f0f0f0;
+  word-break: break-all;
+  min-width: 0.86rem;
+  width: 0.86rem;
+  color: #666;
+}
+.mask section article {
+  padding: 0.15rem 0;
+  flex: 1;
+  padding-left: 0.1rem;
+  padding-right: 0.15rem;
+  word-break: keep-all;
+  border-top: 1px solid #f0f0f0;
+}
+.mask section article span {
+  margin-right: 0.16rem;
+  color: #333;
+}

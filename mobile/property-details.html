@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>物业币明细</title>
+  <link rel="stylesheet" href="css/frozenui.css">
+  <link rel="stylesheet" href="css/property.css">
+  <style>
+    html,
+    body,
+    .wrapper {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="detail wrapper">
+    <ul>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span>-1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span class="plus">+1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span>-1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span class="plus">+1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span>-1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span class="plus">+1.42</span>
+      </li>
+
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span>-1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span class="plus">+1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span>-1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span class="plus">+1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span>-1.42</span>
+      </li>
+      <li>
+        <aside>
+          <h4>取消物业超市订单支付取消了啊好的</h4>
+          <p>2018-08-23 14:15</p>
+        </aside>
+        <span class="plus">+1.42</span>
+      </li>
+
+      <div class="loading-bottom">上拉加载更多</div>
+    </ul>
+  </div>
+
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/bscroll.min.js"></script>
+  <script>
+
+    var scroll = new BScroll('.wrapper', {
+      bounce: {
+        top: false,
+        bottom: true
+      },    
+      click: true,
+      pullUpLoad: {
+        threshold: -70
+      }
+    });
+
+    scroll.on('pullingUp', function () {
+      $('.loading-bottom').html('正在加载请稍后...');
+      $.ajax({
+        url: './js/data.json',
+        type: 'get',
+        dataType: "json", 
+        success: function(res) {
+          var list = res.details;
+          var str = '';
+          list.forEach(function(item) {
+            str += '<li>\
+                  <aside>\
+                    <h4>' + item.title + '</h4>\
+                    <p>' + item.time + '</p>\
+                  </aside>\
+                  <span class="plus">' + item.money + '</span>\
+                </li>';
+          });
+          $('.detail .loading-bottom').before(str); // 插入到加载文字之前
+          scroll.refresh(); // 重新计算better-scroll的高度
+          $('.loading-bottom').html('上拉加载更多');
+          if(res.details.length < 10) {
+            scroll.options.bounce.bottom = false; // 没更多数据，禁止加载更多且禁止回滚 （pullUpLoad） 
+            $('.loading-bottom').html('已全部加载');
+          }
+        },
+        error: function(err) {
+          console.log("err")
+        }
+      })
+      scroll.finishPullUp(); // 让scroll知道这是一次上拉加载完成后
+    });
+  </script>
+
+</body>
+
+</html>

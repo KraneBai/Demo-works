@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/amazeui.min.css" />
+    <link rel="stylesheet" href="css/amazeui.datetimepicker.css" />
+    <link rel="stylesheet" href="css/salary.css">
+    <title>发工资</title>
+</head>
+
+<body>
+    <div class="salary">
+
+        <!-- 头部流程 -->
+        <div class="salary-process">
+            <ul>
+                <li class="active">
+                    <div class="pro-logo upload"></div>
+                    <p>上传工资单</p>
+                </li>
+                <li>
+                    <div class="pro-logo check"></div>
+                    <p>核对订单</p>
+                </li>
+                <li>
+                    <div class="pro-logo send"></div>
+                    <p>预览并发送</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="salary-content">
+            <!-- 上传工资单 -->
+            <div class="upload-salary">
+                <div class="salary-filter">
+                    <div class="fil-item">
+                        <label for="">发放标题</label>
+                        <input type="text" value="2018年04月薪资">
+                    </div>
+                    <div class="fil-item">
+                        <label for="">发放月份</label>
+                        <input type="text" value="" id="work-date" class="date">
+                    </div>
+                </div>
+                <!-- <form name="loadfile" id="loadfile" action="" method="post" enctype="multipart/form-data">   -->
+                <!-- 按钮的onclick事件关联file的onclick事件，点击按钮效果等同于点击file控件 -->
+                <div class="input-file">
+                    <button class="upload blue" onclick="$('#submitFile').click();">上传文件</button>
+                    <input name="submitFile" id="submitFile" type="file" />
+                </div>
+                <!-- </form> -->
+                <p class="view">上传预览</p>
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th>姓名</th>
+                        <th width="200px;">手机号码</th>
+                        <th>实发工资</th>
+                        <th>基本工资</th>
+                        <th>奖金</th>
+                        <th>自定义列</th>
+                    </tr>
+                    <tr>
+                        <td>王永旭</td>
+                        <td>18843106633</td>
+                        <td>5000</td>
+                        <td>1000</td>
+                        <td>500</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>王永旭</td>
+                        <td>18843106633</td>
+                        <td>5000</td>
+                        <td>1000</td>
+                        <td>500</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>王永旭</td>
+                        <td>18843106633</td>
+                        <td>5000</td>
+                        <td>1000</td>
+                        <td>500</td>
+                        <td>1000</td>
+                    </tr>
+                </table>
+                <div class="btns">
+                    <div class="input-file" style="display: inline-block;">
+                        <button class="reload blue" onclick="$('#resubmitFile').click();">重新上传</button>
+                        <input name="resubmitFile" id="resubmitFile" type="file" />
+                    </div>
+                    <button class="next-step green">下一步</button>
+                </div>
+            </div>
+
+            <!-- 核对订单 -->
+            <div class="check-salary">
+                <div class="slide-info">
+                    <div class="slide-box">
+                        <input type="checkbox" name="hidedata" id="hidedata">
+                        <label for="hidedata" class="check-box">隐藏为空的数据</label>
+                    </div>
+                    <div class="slide-box">
+                        <input type="checkbox" name="message" id="message">
+                        <label for="message" class="check-box">短信通知</label>
+                    </div>
+                </div>
+                <div class="edit-data">
+                    <h3>编辑数据项目</h3>
+                    <div class="check-box">
+                        <input type="checkbox" name="basic" id="basic">
+                        <label for="basic" class="check-box">基本工资</label>
+                        <span class="addinfo">添加批注</span>
+                        <input type="text" class="writeinfo">
+                        <span class="delinfo">删除批注</span>
+                    </div>
+                    <div class="check-box">
+                        <input type="checkbox" name="salary" id="salary">
+                        <label for="salary" class="check-box">奖金</label>
+                        <span class="addinfo">添加批注</span>
+                        <input type="text" class="writeinfo">
+                        <span class="delinfo">删除批注</span>
+                    </div>
+                    <div class="check-box">
+                        <input type="checkbox" name="others" id="others">
+                        <label for="others" class="check-box">其他</label>
+                        <span class="addinfo">添加批注</span>
+                        <input type="text" class="writeinfo">
+                        <span class="delinfo">删除批注</span>
+                    </div>
+                    <div class="check-box">
+                        <input type="checkbox" name="tips" id="tips">
+                        <label for="tips" class="check-box">温馨提示</label>
+                        <span class="addinfo">添加批注</span>
+                        <input type="text" class="writeinfo">
+                        <span class="delinfo">删除批注</span>
+                    </div>
+                </div>
+                <div class="btns">
+                    <button class="prev-step green">上一步</button>
+                    <button class="reload blue view-salary">发送</button>
+                    <button class="next orange">定时发送</button>
+                </div>
+            </div>
+
+            <!-- 预览并发送 -->
+            <div class="view-and-send">
+                <button class="second">预览并发送second</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/amazeui.datetimepicker.js"></script>
+    <script>
+        // 日期控件 
+        $('#work-date').datetimepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+            startView: 2,
+            minView: 2
+        });
+        $(document).on("change", "#submitFile", function () {
+            $('.view').html($(this).val() == '' ? '上传预览' : $(this).val());
+        });
+        $(document).on("change", "#resubmitFile", function () {
+            $('.view').html($(this).val() == '' ? '上传预览' : $(this).val());
+        });
+        $('.addinfo').click(function () {
+            $(this).hide();
+            $(this).parents('.check-box').find('.writeinfo').show();
+            $(this).parents('.check-box').find('.delinfo').show();
+        });
+        $('.delinfo').click(function () {
+            $(this).hide();
+            $(this).parents('.check-box').find('.writeinfo').hide();
+            $(this).parents('.check-box').find('.addinfo').show();
+        });
+        // 第一页跳第二页
+        $('.next-step').click(function (){
+            $('.upload-salary').css('left', '-33.33%');
+            $('.check-salary').css('left', '0');
+            $('.salary-process ul li').eq(1).addClass('active');
+        });
+        // 第二页的上一步
+        $('.prev-step').click(function (){
+            $('.upload-salary').css('left', '0');
+            $('.check-salary').css('left', '33.33%');
+            $('.salary-process ul li').eq(1).removeClass('active');
+        });
+        // 第二页跳第三页
+        $('.view-salary').click(function (){
+            $('.upload-salary').css('left', '-66.66%');
+            $('.check-salary').css('left', '-33.33%');
+            $('.view-and-send').css('left', '0');
+            $('.salary-process ul li').eq(2).addClass('active');
+        });
+        // 第三页跳回第二页
+        $('.second').click(function (){
+            $('.upload-salary').css('left', '-33.33%');
+            $('.check-salary').css('left', '0');
+            $('.view-and-send').css('left', '33.33%');
+            $('.salary-process ul li').eq(2).removeClass('active');
+            $('.salary-process ul li').eq(1).addClass('active');
+        });
+    </script>
+</body>
+
+</html>

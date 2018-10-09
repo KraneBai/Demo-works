@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>物业币转赠历史</title>
+  <link rel="stylesheet" href="css/frozenui.css">
+  <link rel="stylesheet" href="css/property.css">
+  <style>
+    html,
+    body,
+    .wrapper {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="history wrapper">
+    <ul>
+      <li>
+        <section>
+          <dl>
+            <dt>转赠用户</dt>
+            <dd>188****6633</dd>
+          </dl>
+          <dl>
+            <dt>数量</dt>
+            <dd>-1.43</dd>
+          </dl>
+          <dl>
+            <dt>时间</dt>
+            <dd>2018-03-19 13:50</dd>
+          </dl>
+          <dl>
+            <dt>留言</dt>
+            <dd>留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言</dd>
+          </dl>
+        </section>
+      </li>
+      <li>
+        <section>
+          <dl>
+            <dt>转赠用户</dt>
+            <dd>188****6633</dd>
+          </dl>
+          <dl>
+            <dt>数量</dt>
+            <dd>-1.43</dd>
+          </dl>
+          <dl>
+            <dt>时间</dt>
+            <dd>2018-03-19 13:50</dd>
+          </dl>
+          <dl>
+            <dt>留言</dt>
+            <dd>留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言</dd>
+          </dl>
+        </section>
+      </li>
+      <li>
+        <section>
+          <dl>
+            <dt>转赠用户</dt>
+            <dd>188****6633</dd>
+          </dl>
+          <dl>
+            <dt>数量</dt>
+            <dd>-1.43</dd>
+          </dl>
+          <dl>
+            <dt>时间</dt>
+            <dd>2018-03-19 13:50</dd>
+          </dl>
+          <dl>
+            <dt>留言</dt>
+            <dd>留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言</dd>
+          </dl>
+        </section>
+      </li>
+      <li>
+        <section>
+          <dl>
+            <dt>转赠用户</dt>
+            <dd>188****6633</dd>
+          </dl>
+          <dl>
+            <dt>数量</dt>
+            <dd>-1.43</dd>
+          </dl>
+          <dl>
+            <dt>时间</dt>
+            <dd>2018-03-19 13:50</dd>
+          </dl>
+          <dl>
+            <dt>留言</dt>
+            <dd>留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言</dd>
+          </dl>
+        </section>
+      </li>
+      <li>
+        <section>
+          <dl>
+            <dt>转赠用户</dt>
+            <dd>188****6633</dd>
+          </dl>
+          <dl>
+            <dt>数量</dt>
+            <dd>-1.43</dd>
+          </dl>
+          <dl>
+            <dt>时间</dt>
+            <dd>2018-03-19 13:50</dd>
+          </dl>
+          <dl>
+            <dt>留言</dt>
+            <dd>留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言</dd>
+          </dl>
+        </section>
+      </li>
+      <li>
+        <section>
+          <dl>
+            <dt>转赠用户</dt>
+            <dd>188****6633</dd>
+          </dl>
+          <dl>
+            <dt>数量</dt>
+            <dd>-1.43</dd>
+          </dl>
+          <dl>
+            <dt>时间</dt>
+            <dd>2018-03-19 13:50</dd>
+          </dl>
+          <dl>
+            <dt>留言</dt>
+            <dd>留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言</dd>
+          </dl>
+        </section>
+      </li>
+      <li>
+        <section>
+          <dl>
+            <dt>转赠用户</dt>
+            <dd>188****6633</dd>
+          </dl>
+          <dl>
+            <dt>数量</dt>
+            <dd>-1.43</dd>
+          </dl>
+          <dl>
+            <dt>时间</dt>
+            <dd>2018-03-19 13:50</dd>
+          </dl>
+          <dl>
+            <dt>留言</dt>
+            <dd>留言留言留言留言留言留言留言留言留言留言留言留言留言留言留言</dd>
+          </dl>
+        </section>
+      </li>
+
+      <div class="loading-bottom">上拉加载更多</div>
+    </ul>
+  </div>
+
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/bscroll.min.js"></script>
+  <script>
+    var scroll = new BScroll('.wrapper', {
+      bounce: {
+        top: false,
+        bottom: true
+      },
+      click: true,
+      pullUpLoad: {
+        threshold: -70
+      }
+    });
+
+    scroll.on('pullingUp', function () {
+      $('.loading-bottom').html('正在加载请稍后...');
+      $.ajax({
+        url: './js/data.json',
+        type: 'get',
+        dataType: "json",
+        success: function (res) {
+          var list = res.history;
+          var str = '';
+          list.forEach(function (item) {
+            str += '<li>\
+                      <section>\
+                        <dl>\
+                          <dt>转赠用户</dt>\
+                          <dd>' + item.user + '</dd>\
+                        </dl>\
+                        <dl>\
+                          <dt>数量</dt>\
+                          <dd>' + item.amount + '</dd>\
+                        </dl>\
+                        <dl>\
+                          <dt>时间</dt>\
+                          <dd>' + item.time + '</dd>\
+                        </dl>\
+                        <dl>\
+                          <dt>留言</dt>\
+                          <dd>' + item.msg + '</dd>\
+                        </dl>\
+                      </section>\
+                    </li>';
+          });
+          $('.detail .loading-bottom').before(str); // 插入到加载文字之前
+          scroll.refresh(); // 重新计算better-scroll的高度
+          $('.loading-bottom').html('上拉加载更多');
+          if (res.history.length < 10) {
+            scroll.options.bounce.bottom = false; // 没更多数据，禁止加载更多且禁止回滚 （pullUpLoad） 
+            $('.loading-bottom').html('已全部加载');
+          }
+        },
+        error: function (err) {
+          console.log("err")
+        }
+      })
+      scroll.finishPullUp(); // 让scroll知道这是一次上拉加载完成后
+    });
+  </script>
+
+</body>
+
+</html>

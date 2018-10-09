@@ -1,0 +1,379 @@
+.inline-group .attendance-item {
+  display: inline-block;
+}
+
+.attendance-wrapper .attendance-item .details input[type="text"],
+.attendance-wrapper .attendance-item .details select {
+  width: 200px;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  padding-right: 22px;
+  background: url("../images/open_arrow.png") no-repeat scroll right 10px center transparent;
+}
+
+.attendance-wrapper .attendance-item span.item-tit {
+  padding-right: 20px;
+  box-sizing: border-box;
+  width: 110px;
+}
+
+.attendance-wrapper .attendance-item .details {
+  margin-left: 110px;
+}
+
+.attendance-wrapper .attendance-item button,
+.attendance-wrapper .attendance-item a.btn,
+.attendance-wrapper .attendance-item input.btn {
+  vertical-align: top;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+}
+
+.attendance-wrapper .attendance-item .details table select {
+  height: auto;
+  vertical-align: middle;
+  border: none;
+  width: auto;
+}
+
+.attendance-wrapper .attendance-item .details .choose-goods {
+  position: relative;
+  padding-left: 106px;
+  border-top: none;
+  height: 44px;
+  line-height: 44px;
+}
+
+.attendance-wrapper .attendance-item .details .click-a {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 13px;
+  margin-top: -13px;
+  color: #fff;
+  height: 26px;
+  line-height: 26px;
+  background: #04a9ff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.attendance-wrapper .attendance-item .details .choose-goods a {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+
+.attendance-wrapper .attendance-item .details .choose-goods input {
+  display: block;
+  padding-left: 22px;
+  padding-right: 10px;
+  font-size: 13px;
+  color: #999;
+  height: 100%;
+  border: none;
+  width: 100%;
+}
+
+.attendance-wrapper .attendance-item .table-details {
+  margin-left: 90px;
+  font-size: 0;
+}
+
+.attendance-wrapper .attendance-item .table-details .table-wrapper {
+  display: inline-block;
+  overflow-x: auto;
+  max-width: 100%;
+  border: 1px solid #e5e5e5;
+  font-size: 13px;
+}
+
+.attendance-wrapper .attendance-item .table-details .wid80 i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/delete.png);
+  cursor: pointer;
+}
+
+.attendance-wrapper .attendance-item .table-details .red {
+  color: #ff3b3b;
+}
+
+.attendance-wrapper .attendance-item .table-details tr th,
+.attendance-wrapper .attendance-item .table-details tr td {
+  border-top: none;
+  border-left: none;
+  border-right: 1px solid #e5e5e5;
+}
+
+.attendance-wrapper .attendance-item .table-details tr th:last-child,
+.attendance-wrapper .attendance-item .table-details tr td:last-child {
+  border-right: none;
+}
+
+.attendance-wrapper .attendance-item .new-details {
+  display: inline-block;
+  padding: 10px 5px 10px 0;
+  background: #eee;
+}
+
+.attendance-wrapper .attendance-item .new-details .tbody {
+  height: 135px;
+  overflow-y: auto;
+}
+
+.attendance-wrapper .attendance-item .new-details .thead {
+  display: inline-block;
+}
+
+.attendance-wrapper .attendance-item .new-details .thead,
+.attendance-wrapper .attendance-item .new-details .tbody-item {
+  margin: 0 5px 0 32px;
+  box-sizing: border-box;
+  font-size: 0;
+  border: 1px solid #e5e5e5;
+  background: #f8f8f8;
+}
+
+.attendance-wrapper .attendance-item .new-details .thead span,
+.attendance-wrapper .attendance-item .new-details .tbody-item span {
+  display: inline-block;
+  height: 45px;
+  vertical-align: top;
+  min-width: 160px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 13px;
+  box-sizing: border-box;
+  border-left: 1px solid #e5e5e5;
+}
+
+.attendance-wrapper .attendance-item .new-details .thead span:first-child,
+.attendance-wrapper .attendance-item .new-details .tbody-item span:first-child {
+  min-width: 80px;
+  border-left: none;
+}
+
+.attendance-wrapper .attendance-item .new-details .tbody-item {
+  background: #fff;
+  border-top: none;
+}
+
+.attendance-wrapper .attendance-item .new-details .tbody-item:hover {
+  background: #f1faff;
+}
+
+.attendance-wrapper .attendance-item .new-details .add-goods {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.tbody::-webkit-scrollbar {
+  width: 4px;
+  background: #eee;
+}
+
+.tbody::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  height: 14px;
+}
+
+.attendance-wrapper .attendance-item .new-details input[type="checkbox"]+label,
+input[type="radio"]+label {
+  height: 45px;
+  line-height: 45px;
+}
+
+.attendance-wrapper .attendance-item .new-details input[type="checkbox"]+label::before,
+input[type="radio"]+label::before {
+  left: -20px;
+}
+
+/* 弹窗 */
+.popup-wrapper {
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.popup-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  margin-left: -560px;
+  width: 1120px;
+  background: #fff;
+  font-size: 13px;
+}
+
+.popup-inner h2 {
+  position: relative;
+  padding-left: 20px;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+  font-size: 15px;
+  background: #eee;
+  font-weight: normal;
+}
+
+.popup-inner h2 i {
+  position: absolute;
+  top: 50%;
+  margin-top: -9px;
+  right: 10px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  background: url("../images/shutdown.png") no-repeat left center transparent;
+}
+
+.popup-inner .popup-content {
+  padding: 10px 0 0;
+  height: 540px;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.popup-inner .popup-content .tree {
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  height: 100%;
+  float: left;
+  width: 200px;
+}
+
+.popup-inner .popup-content .tree .tree-wrapper {
+  height: 100%;
+  overflow: scroll;
+}
+
+.popup-inner .popup-content .products {
+  box-sizing: border-box;
+  padding: 10px 30px 20px 20px;
+  height: 100%;
+  margin-left: 200px;
+}
+
+.popup-inner .popup-content .products .header {
+  font-size: 0;
+}
+
+.popup-inner .popup-content .products .header input[type="text"] {
+  vertical-align: top;
+  font-size: 13px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin-right: 20px;
+  height: 30px;
+  width: 180px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  outline: none;
+}
+
+.popup-inner .popup-content .products .header input[type="submit"] {
+  height: 30px;
+  line-height: 30px;
+  vertical-align: top;
+  background: #00afff;
+  color: #fff;
+  border: none;
+  width: 68px;
+  text-align: center;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.popup-inner .popup-content .products .header span {
+  height: 30px;
+  line-height: 30px;
+  margin-right: 10px;
+  font-size: 13px;
+}
+
+.popup-inner .popup-content .products .header p {
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+}
+
+.popup-inner .popup-content .products .header p strong {
+  margin: 0 5px;
+  font-weight: normal;
+  color: #00afff;
+}
+
+.popup-inner .popup-content .products .header input[type="text"].submit {
+  margin-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.popup-inner .popup-content .products .product-list .table-wrapper {
+  height: 350px;
+}
+
+.popup-inner .attendance-item table tr th,
+.popup-inner .attendance-item table tr td {
+  min-width: 120px;
+}
+
+.popup-inner .attendance-item table tr th.wid30,
+.popup-inner .attendance-item table tr td.wid30 {
+  min-width: 30px !important;
+}
+
+.popup-inner input[type="checkbox"]+label,
+input[type="radio"]+label {
+  height: 16px;
+  width: 16px;
+}
+
+.popup-inner .product-pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.popup-inner .product-pagination span {
+  letter-spacing: 3px;
+}
+.popup-inner .product-pagination select {
+  margin-left: 10px;
+  padding-left: 34px;
+  height: 30px;
+}
+.popup-inner .popup-footer {
+  text-align: center;
+  height: 85px;
+  line-height: 85px;
+  font-size: 0;
+}
+
+.popup-inner .popup-footer a {
+  text-decoration: none;
+  display: inline-block;
+  width: 96px;
+  height: 36px;
+  line-height: 36px;
+  color: #fff;
+  border-radius: 10px;
+  background: #00afff;
+  text-align: center;
+  font-size: 15px;
+}
+
+.popup-inner .popup-footer a.cancel {
+  margin-left: 60px;
+  background: #a0a0a0;
+}

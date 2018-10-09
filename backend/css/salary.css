@@ -1,0 +1,351 @@
+.salary{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* salary流程头部 */
+.salary-process{
+    padding: 60px 32px 46px;
+    font-size: 0;
+}
+.salary-process ul{
+    text-align: center;
+}
+.salary-process ul li{
+    position: relative;
+    display: inline-block;
+    margin-right: 220px;
+}
+.salary-process ul li:before{
+    position: absolute;
+    top: 40px;
+    left: -220px;
+    width: 220px;
+    height: 3px;
+    background-color: #d2d2d2;
+    content: '';
+}
+.salary-process ul li:first-child:before{
+    display: none;
+}
+.salary-process ul li:last-child{
+    margin-right: 0;
+}
+.salary-process ul li .pro-logo{
+    background-color: #d2d2d2;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: center;
+    background-repeat: no-repeat;
+    background-size: 38px 38px;
+    background-position: center center;
+}
+.salary-process ul li .pro-logo.check{
+    background-image: url(../images/pro-check.png);
+}
+.salary-process ul li .pro-logo.upload{
+    background-image: url(../images/pro-upload.png);
+}
+.salary-process ul li .pro-logo.send{
+    background-image: url(../images/pro-send.png);
+}
+.salary-process ul li .pro-logo img{
+    vertical-align: middle;   
+}
+.salary-process ul li p{
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+.salary-process ul li.active .pro-logo{
+    background-color: #04a9ff;
+}
+.salary-process ul li.active:before{
+    background-color: #04a9ff;
+}
+
+.salary-content{
+    position: relative;
+    width: 300%;
+    min-height: 500px;
+}
+/* 上传工资单页面样式 */
+.salary-content .upload-salary{
+    box-sizing: border-box;
+    padding: 0 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 33.33%;
+    transition: all .5s;
+}
+.salary .salary-filter{
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+.salary .salary-filter label{
+    margin-bottom: 0;
+    font-weight: normal;
+    height: 36px;
+    line-height: 36px;
+}
+.salary .salary-filter input{
+    padding: 0 5px 0 5px;
+    box-sizing: border-box;
+    width: 182px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #d2d2d2;
+    font-size: 14px;
+    outline: none;
+    vertical-align: top;
+}
+.salary .salary-filter input.date{
+    background-image: url(../images/calendar.png);
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+}
+.salary .fil-item{
+    display: inline-block;
+    margin-right: 30px;
+}
+.salary .fil-item label{
+    margin-right: 20px;
+}
+.salary .view{
+    margin: 40px 0 20px;
+    color: #ff2626;
+    font-size: 14px;
+}
+
+/* 核对工资 */
+.salary-content .check-salary{
+    box-sizing: border-box;
+    padding: 0 32px;
+    position: absolute;
+    left: 33.33%;
+    top: 0;
+    width: 33.33%;
+    transition: all .5s;
+}
+.check-salary .slide-info{
+    margin-bottom: 30px;
+}
+.check-salary .edit-data h3{
+    font-weight: normal;
+    font-size: 14px;
+}
+.check-salary .edit-data .check-box{
+    margin-bottom: 10px;
+}
+.check-salary .edit-data .check-box label{
+    font-size: 14px;
+    width: 80px;
+}
+.check-salary .edit-data .check-box input[type="text"]{
+    display: none;
+    width: 240px;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid #e0e0e0;
+}
+.check-salary .edit-data .check-box span{
+    font-size: 14px;
+    cursor: pointer;
+}
+.check-salary .edit-data .check-box span.addinfo{
+    color: #04a9ff;
+}
+.check-salary .edit-data .check-box span.delinfo{
+    display: none;
+    margin-left: 20px;
+    color: #ff4040;
+}
+.check-salary .btns{
+    margin-top: 30px;
+}
+
+/* 预览并发送页面样式 */
+.salary-content .view-and-send{
+    box-sizing: border-box;
+    padding: 0 32px;
+    position: absolute;
+    left: 66.66%;
+    top: 0;
+    width: 33.33%;
+    transition: all .5s;
+}
+
+
+/* 可公共button样式 */
+.salary button{
+    display: inline-block;
+    margin-right: 20px;
+    height: 42px;
+    width: 120px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.salary .btns button:last-child{
+    margin-right: 0;
+}
+.salary button.blue{
+    background: #04a9ff;
+}
+.salary button.green{
+    background: #00d299;
+}
+.salary button.orange{
+    background: #ef704d;
+}
+
+/* table样式 */
+.salary table{
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+.salary table tr th,
+.salary table tr td{
+    text-align: center;
+    color: #333;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    width: 160px;
+}
+.salary table tr th {
+    border-top: 1px solid #e5e5e5;
+    background-color: #f8f8f8;
+    font-weight: normal;
+}
+.salary table tr td:last-child,
+.salary table tr th:last-child {
+    border-right: 1px solid #e5e5e5;
+}
+.salary table tr td{
+    background: #fff;
+}
+
+/* checkbox && radio 样式 */
+input[type="checkbox"],
+input[type="radio"] {
+	visibility: hidden;
+}
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    color: #333;
+    cursor: pointer;
+    font-weight: normal;
+}
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 16px;
+    border-radius: 2px;
+    border: 1px solid #bfbfbf;
+}
+input[type="checkbox"]:checked + label::before,
+input[type="radio"]:checked + label::before {
+    border: 1px solid #00afff;
+}
+input[type="checkbox"]:checked + label::before {
+    background-image: url('../images/check.png');
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: center center;
+}
+input[type="radio"] + label::before {
+    border-radius: 50%;
+}
+input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 50%;
+    margin-top: 0px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: #00afff;
+    border-radius: 50%;
+}
+
+/* 滑块checkbox */
+.slide-box{
+    margin-right: 40px;
+    padding-right: 60px;
+    display: inline-block;
+    font-size: 0;
+}
+.slide-box:last-child{
+    margin-right: 0;
+}
+.slide-box input[type="checkbox"] + label{
+    margin-left: -13px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.slide-box input[type="checkbox"] + label::before{
+    content: '';
+    position: absolute;
+    right: -60px !important;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 26px;
+    width: 50px;
+    border-radius: 20px;
+    border: 1px solid #e1e1e1;
+    background-color: #eee;
+}
+.slide-box input[type="checkbox"] + label::after{
+    content: '';
+    position: absolute;
+    right: -33px !important;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #00afff;
+}
+.slide-box input[type="checkbox"]:checked + label::after{
+    right: -57px !important;
+}
+.slide-box input[type="checkbox"]:checked + label::before{
+    background-image: none;
+    background-color: #fff;
+}
+
+/* 上传文件样式 */
+.input-file{
+    position: relative;
+}
+.input-file input{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

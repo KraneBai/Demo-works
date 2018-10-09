@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+/* 重置 */
+select {
+    /* 很关键：将默认的select选择框样式清除 */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("../images/arrow_down_gray.png") no-repeat scroll 240px center transparent;
+}
+a{
+    text-decoration: none;
+}
+button, input{
+    border: none;
+    background: none;
+}
+/* wrapper内容区域 */
+.newidx-wrapper{
+    width: 100%;
+    height: 100%;
+    background: #f3f4f5;
+    overflow-y: auto;
+    font-size: 14px;
+}
+/* 头部 */
+.newidx-wrapper .newidx-title{
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 100%;
+    min-width: 1394px;
+    background: #eee;
+    color: #666;
+    height: 42px;
+    line-height: 42px;
+}
+.newidx-title .newidx-tab{
+    margin-right: 40px;
+    display: inline-block;
+    background: #1fce02;
+    color: #fff;
+    width: 105px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+.newidx-title p{
+    display: inline-block;
+}
+.newidx-title p strong{
+    color: #2f617e;
+}
+/* 内容区域 */
+.newidx-wrapper .newidx-content{
+    box-sizing: border-box;
+    padding: 0 23px 20px;
+    width: 100%;
+    font-size: 0;
+}
+.newidx-wrapper .newidx-content .newidx-conleft,
+.newidx-wrapper .newidx-content .newidx-conright{
+    display: inline-block;
+    vertical-align: top;
+}
+.newidx-wrapper .newidx-content .newidx-conleft{
+    margin-right: 28px;
+    width: 1394px;
+}
+.newidx-wrapper .newidx-content .newidx-conright i{
+        display: inline-block;
+        margin-top: 20px;
+        width: 40px;
+        height: 40px;
+        background: url(../images/edit.png);
+        cursor: pointer;
+}
+.newidx-contab{
+    display: inline-block;
+    margin-right: 22px;
+    margin-top: 20px;
+    width: 450px;
+    height: 268px;
+    background: #fff;
+    vertical-align: top;
+    box-shadow: 3px 3px 5px #ebeef2 , -3px -3px 5px #ebeef2;
+}
+.newidx-contab:nth-child(3n){
+    margin-right: 0;
+}
+/* 公共title */
+.newidx-contab h2{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 16px;
+    height: 42px;
+    line-height: 42px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+.newidx-contab h2 i{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.newidx-contab h2 span.more{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: url(../images/more.png) no-repeat center center;
+}
+.newidx-contab h2 i.minus{
+    background: url(../images/less.png) no-repeat ;
+}
+.newidx-contab h2 i.plus{
+    background: url(../images/plus.png) no-repeat ;
+}
+/* 输入框类型Tab */
+.newidx-inp .inpstyle{
+    display: block;
+    box-sizing: border-box;   
+    width: 260px;
+    height: 42px;      
+    border: 1px solid #e0e0e0;
+}
+.newidx-inp input{
+    padding: 0 10px; 
+    margin: 0 auto;
+    color: #999;
+}
+.newidx-inp-one input{
+    margin-top: 60px;
+}
+.newidx-inp-two input{
+    margin-top: 30px;
+}
+.newidx-inp select{
+    padding: 0 24px 0 10px;
+    margin: 20px auto 0; 
+    color: #333;
+}
+.newidx-inp .btns{
+    text-align: center;
+    font-size: 0;
+}
+.newidx-inp .btns button{
+    margin-top: 30px;
+    font-size: 15px;
+    color: #fff;
+    width: 82px;
+    height: 36px;
+    line-break: 36px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+.newidx-inp .btns button.btn-right{
+    margin-right: 22px;
+}
+/* 显示数据类型Tab */
+.newidx-statics .newidx-statics-inner{
+    box-sizing: border-box;
+    padding-top: 50px;
+    width: 100%;
+    font-size: 0;
+}
+.newidx-statics .newidx-statics-item{
+    padding-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: top;
+}
+.newidx-statics .newidx-statics-item:nth-child(1){
+    width: 151px;
+}
+.newidx-statics .newidx-statics-item:nth-child(2){
+    box-sizing: border-box;
+    width: 148px;
+    border: 1px solid #eee;
+    border-top: none; 
+    border-bottom : none; 
+}
+.newidx-statics .newidx-statics-item:nth-child(3){
+    width: 151px;
+}
+.newidx-statics .newidx-statics-item h3{
+    color: #444;
+    font-size: 14px;
+    font-weight: normal;
+}
+.newidx-statics .newidx-statics-item p{
+    word-break: break-all;
+    width: 100%;
+    font-size: 12px;
+    color: #999;
+}   
+.newidx-statics .newidx-statics-item p.large span{
+    font-size: 36px;
+}
+.newidx-statics-item p.small{
+    margin: 30px 0 20px;
+}
+.newidx-statics-item p.small span{
+    font-size: 22px;
+}
+.newidx-statics-item p.medium span{
+    font-size: 24px;
+}
+/* 一行 */
+.newidx-statics-one .newidx-statics-item h3{
+    margin-bottom: 40px;
+}
+.newidx-content .newidx-add{
+    display: none;
+    line-height: 268px;
+    text-align: center;
+    font-size: 14px;
+}
+.newidx-content .newidx-add span{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #00afff;
+    border: 1px solid #00afff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.newidx-content .newidx-contab label,
+.newidx-content .newidx-contab input[type="checkbox"]{
+    display: none;
+}
+/* 背景颜色 */
+.bg-blue{
+    background: #00afff;
+}
+.bg-green{
+    background: #00d299;
+}
+.bg-orange{
+    background: #ee6e4c;
+}
+/* 文字颜色 */
+.txt-blue{
+    color: #00afff;
+}
+.txt-green{
+    color: #00d299;
+}
+.txt-orange{
+    color: #ee6e4c;
+}
