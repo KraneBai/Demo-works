@@ -1,0 +1,193 @@
+/* 登录 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body,
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.login-common {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.login-common h1 {
+  margin-bottom: 115px;
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+}
+
+.login-common .common-inner {
+  padding: 20px 54px 0;
+  width: 560px;
+  min-height: 366px;
+  color: #0070cc;
+  font-size: 14px;
+  background: #fff;
+}
+
+.login-common form {
+  padding: 40px 60px 0;
+}
+
+.login-common form .login-item {
+  position: relative;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.login-common form .login-item:last-child {
+  padding-bottom: 0;
+}
+
+.login-common form .login-item input {
+  padding: 0 10px;
+  width: 100%;
+  height: 36px;
+}
+
+.login-common form .login-item p {
+  position: absolute;
+  bottom: 0;
+  height: 30px;
+  line-height: 30px;
+  color: #ff4040;
+}
+
+.login-common form .login-item a.forget-pwd {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 30px;
+  line-height: 30px;
+  color: #0070cc;
+}
+
+.login-common form .login-item.verify-item {
+  display: flex;
+}
+
+.login-common form .login-item.verify-item input {
+  flex: 1;
+}
+
+.login-common form .login-item a.verify-btn {
+  margin-left: 20px;
+  display: inline-block;
+  width: 120px;
+  height: 36px;
+  line-height: 36px;
+  color: #0070cc;
+  background: #d7edff;
+  text-align: center;
+}
+
+.login-common form input[type="text"] {
+  border: 1px solid #dcdcdc;
+  color: #999;
+}
+
+.login-common form input[type="submit"],
+.login-common form a.next-btn {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  background: #0070cc;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+.login-common .login-inner .login-tab {
+  display: flex;
+}
+
+.login-common .login-inner .login-tab span {
+  flex: 1;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid #e5e5e5;
+}
+.login-common .login-inner .login-tab span i {
+  margin-right: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 100%;
+  vertical-align: middle;
+  background-size: 20px 20px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.login-common .login-inner .login-tab span i.ico-account {
+  background-image: url(../images/account.png)
+}
+.login-common .login-inner .login-tab span i.ico-tel {
+  background-image: url(../images/tel.png)
+}
+
+.login-common .login-inner .login-tab span.active {
+  border-bottom: 1px solid #0070cc;
+}
+
+.login-common .find-inner h2 {
+  position: relative;
+  padding: 20px 0;
+  font-weight: normal;
+  font-size: 18px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.login-common .find-inner h2 a {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  font-size: 14px;
+  color: #0070cc;
+  text-decoration: none;
+}
+
+.login-common .find-inner .find-next h3 {
+  margin: -10px 0 20px;
+  color: #666;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.login-common .find-inner .find-next h3 span {
+  color: #0070cc;
+}
+
+.login-common .find-inner .find-next input[type="submit"] {
+  margin-top: 0;
+}
+
+/* 
+      隐藏
+      电话号登录
+      找回密码
+      找回密码下一步 
+    */
+.login-common .login-inner .login-account,
+.login-common .find-inner,
+.login-common .find-inner .find-next {
+  display: none;
+}

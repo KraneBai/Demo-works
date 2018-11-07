@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>保险</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="css/AdminLTE.min.css">
+  <link rel="stylesheet" href="css/_all-skins.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/person.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <a href="person-index.html" class="logo">
+        <span class="logo-mini"><b>JLBX</b></span>
+        <span class="logo-lg"><b>吉林省保险从业人员服务平台</b><i>中国太平洋人寿股份有限公司吉林分公司</i></span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="images//user2-160x160.jpg" class="user-image" alt="User Image">
+                <span class="hidden-xs">保险从业</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="user-header">
+                  <img src="images//user2-160x160.jpg" class="img-circle" alt="User Image">
+                  <p>许首旭</p>
+                </li>
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">修改密码</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">登出</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <ul class="sidebar-menu" data-widget="tree">
+          <li>
+            <a href="javascript:;" class="listen-side-toggle" data-toggle="push-menu" role="button"><i class="fa fa-align-justify"></i></a>
+          </li>
+          <li class="active"><a href="person-index.html"><i class="fa fa-home"></i> <span>网站首页</span></a></li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-pie-chart"></i>
+              <span>业务分析</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href=""><i class="fa fa-circle-o"></i> General</a></li>
+            </ul>
+          </li>
+          <li><a href="person-details.html"><i class="fa fa-user"></i> <span>人员分析</span></a></li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-database"></i>
+              <span>业务数据管理</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="upload-data.html"><i class="fa fa-circle-o"></i> 上传数据</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> 上传情况</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> 数据修改</a></li>
+              <li><a href="upload-logs.html"><i class="fa fa-circle-o"></i> 上传记录</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-user"></i>
+              <span>用户和角色</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="user.html"><i class="fa fa-circle-o"></i> 用户管理</a></li>
+              <li><a href="add-user.html"><i class="fa fa-circle-o"></i> 角色管理</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-pie-chart"></i>
+              <span>基础数据管理</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href=""><i class="fa fa-circle-o"></i> General</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-commenting"></i>
+              <span>消息</span>
+              <span class="pull-right-container">
+                <span class="label bg-green pull-right">4</span>
+                <span class="label bg-red pull-right">4</span>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="messages.html">
+                  <i class="fa fa-circle-o"></i> 通知公告
+                  <span class="pull-right-container">
+                    <span class="label bg-green pull-right">4</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="messages.html">
+                  <i class="fa fa-circle-o"></i> 分析报告
+                  <span class="pull-right-container">
+                    <span class="label bg-red pull-right">4</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="content-wrapper">
+      <section class="content-header">
+        <ol class="breadcrumb" style="position: static; float: none;">
+          <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+          <li>人员分析</li>
+          <li class="active">人员分析</li>
+        </ol>
+      </section>
+
+      <section class="content multi-form-item content-common person-index">
+        <div class="box">
+          <a href="javascript:;" class="pull-up-btn">收起<i class="fa fa-angle-up pull-right"></i></a>
+          <form class="form-common">
+            <div class="form-block-item">
+              <label style="line-height: 40px;">注册时间</label>
+              <div class="form-right">
+                <input type="text" style="width: 100%;" id="datetime" class="datetime">
+              </div>
+            </div>
+            <div class="form-block-item mar-top10">
+              <label style="line-height: 40px;">地区</label>
+              <div class="form-right">
+                <div class="text-select-item">
+                  <a href="javascript:;" class="active">全省</a>
+                  <a href="javascript:;">长春市</a>
+                  <a href="javascript:;">吉林市</a>
+                  <a href="javascript:;">松原市</a>
+                  <a href="javascript:;">白山市</a>
+                  <a href="javascript:;">白城市</a>
+                  <a href="javascript:;">通化市</a>
+                  <a href="javascript:;">延边自治州</a>
+                </div>
+                <div class="text-select-item urban-lists">
+                  <a href="javascript:;">二道区</a>
+                  <a href="javascript:;">农安县</a>
+                  <a href="javascript:;">南关区</a>
+                  <a href="javascript:;">双阳区</a>
+                  <a href="javascript:;">宽城区</a>
+                  <a href="javascript:;">德惠市</a>
+                  <a href="javascript:;">朝阳区</a>
+                  <a href="javascript:;">榆树市</a>
+                  <a href="javascript:;">绿园区</a>
+                </div>
+              </div>
+            </div>
+            <div class="toggle-section">
+              <div class="form-block-item mar-top10">
+                <label style="line-height: 40px;">对比类型</label>
+                <div class="form-right text-select-item">
+                  <a href="javascript:;" class="active">行业</a>
+                  <a href="javascript:;">寿险类型</a>
+                  <a href="javascript:;">财险类型</a>
+                  <a href="javascript:;">中介类型</a>
+                </div>
+              </div>
+              <div class="form-block-item mar-top10">
+                <label style="line-height: 40px;">公司</label>
+                <div class="form-right text-select-item">
+                  <select class="form-control select2">
+                    <option selected="selected">全部</option>
+                    <option>Alaska</option>
+                  </select>
+                  <select class="form-control select2">
+                    <option selected="selected">全部</option>
+                    <option>Alaska</option>
+                  </select>
+                  <select class="form-control select2">
+                    <option selected="selected">全部</option>
+                    <option>Alaska</option>
+                  </select>
+                  <select class="form-control select2">
+                    <option selected="selected">全部</option>
+                    <option>Alaska</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-block-item">
+                <label style="line-height: 40px;">政治面貌</label>
+                <div class="form-right" data-val="">
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="masses">
+                    <label for="masses" class="check-box">群众</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="communist">
+                    <label for="communist" class="check-box">共青党员</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="cpc">
+                    <label for="cpc" class="check-box">中共党员</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="democratic">
+                    <label for="democratic" class="check-box">民主党派人士</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-block-item">
+                <label style="line-height: 40px;">文化程度</label>
+                <div class="form-right" data-val="">
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="junior">
+                    <label for="junior" class="check-box">初中以下</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="high-school">
+                    <label for="high-school" class="check-box">高中</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="technical">
+                    <label for="technical" class="check-box">技工学校</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="mid-technical">
+                    <label for="mid-technical" class="check-box">中等专业学校和中等技术学校</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="specialist">
+                    <label for="specialist" class="check-box">大学专科和专科学校</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="undergraduate">
+                    <label for="undergraduate" class="check-box">大学本科</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="postgraduate">
+                    <label for="postgraduate" class="check-box">研究生</label>
+                  </div>
+                  <div class="check-box">
+                    <input type="checkbox" name="vacation" id="doctor">
+                    <label for="doctor" class="check-box">博士生</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-block-item age-range">
+                <label style="line-height: 40px;">年龄</label>
+                <div class="form-right text-select-item">
+                  <a href="javascript:;" class="active">不限</a>
+                  <a href="javascript:;">18岁-24岁</a>
+                  <a href="javascript:;">25岁-34岁</a>
+                  <a href="javascript:;">35岁-44岁</a>
+                  <a href="javascript:;">45岁-54岁</a>
+                  <a href="javascript:;">55岁-64岁</a>
+                  <a href="javascript:;">65岁以上</a>
+                  <input type="text" class="form-control" placeholder="最小年龄">
+                  &nbsp;&nbsp; — &nbsp;&nbsp;
+                  <input type="text" class="form-control" placeholder="最大年龄">
+                </div>
+              </div>
+              <div class="form-block-item">
+                <label style="line-height: 40px;">性别</label>
+                <div class="form-right text-select-item">
+                  <a href="javascript:;" class="active">不限</a>
+                  <a href="javascript:;">男</a>
+                  <a href="javascript:;">女</a>
+                </div>
+              </div>
+            </div>
+            <div class="mar-top20">
+              <a href="" class="form-btn search-btn">统计分析</a>
+              <a href="" class="form-btn reset-btn">重置</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="person-tab-wrapper">
+
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active">
+              <a href="#all" data-toggle="tab">现存</a>
+            </li>
+            <li><a href="#add" data-toggle="tab">新增</a></li>
+            <li><a href="#leave" data-toggle="tab">离司</a></li>
+          </ul>
+          <section class="clearfix">
+            <button type="submit" class="btn btn-default">导出</button>
+            <button type="submit" class="btn btn-default">详细</button>
+          </section>
+          <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="all">
+              <h2>现存人员</h2>
+              <div class="box">
+                <div class="charts" id="allLineSm" style="width: 100%;height: 300px;"></div>
+                <div class="charts" id="allLineLg" style="width: 100%;height: 300px;"></div>
+              </div>
+              <div class="box">
+                <table class="table table-bordered table-hover dataTable">
+                  <thead>
+                    <tr>
+                      <th>行业人数</th>
+                      <th>行业13个月留存率</th>
+                      <th>公司人数</th>
+                      <th>行业占比</th>
+                      <th>公司13个月留存率</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="box">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>行业、公司\数值\日期</th>
+                      <th>2018-02</th>
+                      <th>2018-03</th>
+                      <th>2018-04</th>
+                      <th>2018-05</th>
+                      <th>2018-06</th>
+                      <th>2018-07</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>行业</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                    <tr>
+                      <td>行业</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                    <tr>
+                      <td>占比</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="add">
+              <h2>新增人员</h2>
+              <div class="box">
+                <div class="charts" id="addLineSm" style="width: 100%;height: 300px;"></div>
+                <div class="charts" id="addLineLg" style="width: 100%;height: 300px;"></div>
+              </div>
+              <div class="box">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>行业、公司\数值\日期</th>
+                      <th>2018-02</th>
+                      <th>2018-03</th>
+                      <th>2018-04</th>
+                      <th>2018-05</th>
+                      <th>2018-06</th>
+                      <th>2018-07</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>行业</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                    <tr>
+                      <td>行业</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                    <tr>
+                      <td>占比</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="box">
+                <div id="addBar" style="width: 100%;height: 300px;"></div>
+              </div>
+              <div class="box">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>类型、数值|时间</th>
+                      <th>2018-02</th>
+                      <th>2018-03</th>
+                      <th>2018-04</th>
+                      <th>2018-05</th>
+                      <th>2018-06</th>
+                      <th>2018-07</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>员工数</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                    <tr>
+                      <td>新增</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                    <tr>
+                      <td>离司</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="leave">
+              <h2>离司人员</h2>
+              <div class="box">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>行业、公司\数值\日期</th>
+                      <th>2018-02</th>
+                      <th>2018-03</th>
+                      <th>2018-04</th>
+                      <th>2018-05</th>
+                      <th>2018-06</th>
+                      <th>2018-07</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>行业</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                    <tr>
+                      <td>行业</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                    <tr>
+                      <td>占比</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                      <td>6666</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+      </section>
+
+      </section>
+    </div>
+    </section>
+  </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/echarts.common.min.js"></script>
+  <script src="js/select2.full.min.js"></script>
+  <script src="js/adminlte.min.js"></script>
+  <script src="js/laydate.js"></script>
+  <script>
+    $(function () {
+      $('.check-box input').change(function (e) {
+        // 获取单个点击的值
+        // console.log($(this).next().html())
+
+        // 拼接字符串
+        let checkParent = $(this).parents('.form-right');
+        let childInput = $(checkParent).find('input');
+        let childInputLen = childInput.length;
+        let val = ''
+        for (var i = 0; i < childInputLen; i++) {
+          if (childInput.eq(i).is(':checked')) {
+            val += ',' + childInput.eq(i).next().html()
+          }
+        }
+        checkParent.attr('data-val', val.substr(1))
+      })
+      // 收起操作
+      $('.pull-up-btn').click(function () {
+        $('.toggle-section').slideToggle();
+        if ($(this).children('i').attr('class').indexOf('up') > -1) {
+          $(this).html('展开<i class="fa fa-angle-down pull-right"></i>')
+        } else {
+          $(this).html('收起<i class="fa fa-angle-up pull-right"></i>')
+        }
+      });
+      laydate.render({
+        elem: '#datetime', //指定元素
+        type: 'month',
+        range: true,
+        min: '2018-1-1'
+      });
+      $('.select2').select2();
+      // tab栏
+      $('#myTab li:eq(0) a').tab('show');
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        // 获取已激活的标签页的名称
+        var activeTab = $(e.target).text();
+        if (activeTab === '新增') {
+          initChart('addLineSm', addLineSmopt)
+          initChart('addLineLg', addLineLgopt)
+          initChart('addBar', addBaropt)
+        }
+        if (activeTab === '现存') {
+          initChart('allLineSm', allLineSmopt)
+          initChart('allLineLg', allLineLgopt)
+        }
+      });
+
+      // 初始化图表
+      // 基于准备好的dom，初始化echarts实例
+      function initChart(ele, opts) {
+        // console.log(document.getElementById(ele))
+        var eleDom = echarts.init(document.getElementById(ele));
+        // 使用刚指定的配置项和数据显示图表。
+        eleDom.setOption(opts);
+        // tab切换时无法获取width的解决办法
+        eleDom.resize()
+        // on只能绑定一次
+        window.addEventListener("resize", function () {
+          eleDom.resize();
+        });
+        // 解决导航伸缩时图表的响应式
+        var sideToggle = document.getElementsByClassName('listen-side-toggle')[0];
+        sideToggle.addEventListener("click", function () {
+          setTimeout(function () {
+            eleDom.resize();
+          }, 200)
+        });
+      }
+
+      // 指定图表的配置项和数据
+      var addLineLgopt = {
+        color: ['#ffcc00', '#21cbff'],
+        grid: {
+          top: 10
+        },
+        xAxis: {
+          axisLine: {
+            show: false
+          },
+          axisLabel: {
+            color: '#a1a1a1'
+          },
+          axisTick: {
+            show: false
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          },
+          boundaryGap: false,
+          data: ['2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10']
+        },
+        yAxis: {
+          offset: 2,
+          axisLine: {
+            show: false,
+            lineStyle: {
+              color: '#f4f4f4'
+            }
+          },
+          axisLabel: {
+            color: '#c6c6c6'
+          },
+          axisTick: {
+            inside: true
+          },
+          splitLine: {
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          }
+        },
+        tooltip: {
+          axisPointer: {
+            type: 'cross'
+          }
+        },
+        series: [{
+            name: '行业',
+            type: 'line',
+            data: [1005, 4000, 1000, 7000, 5000, 2500],
+            symbolSize: 20,
+            symbol: 'pin'
+          },
+          {
+            name: '公司',
+            type: 'line',
+            data: [2005, 3000, 9000, 5000, 7000, 3500],
+            symbolSize: 20,
+            symbol: 'pin'
+          }
+        ]
+      };
+      var addLineSmopt = {
+        color: ['#ffcc00', '#21cbff'],
+        grid: {
+          bottom: 10
+        },
+        title: {
+          text: '新增人员趋势图',
+          textStyle: {
+            fontWeight: 'normal',
+            fontSize: '16'
+          },
+          top: 10,
+          x: 'center'
+        },
+        legend: {
+          top: 20,
+          right: 10,
+          align: 'left',
+          orient: 'vertical',
+          selectedMode: false,
+          itemHeight: 2
+        },
+        xAxis: {
+          axisLine: {
+            show: false
+          },
+          axisLabel: {
+            color: '#a1a1a1'
+          },
+          axisTick: {
+            show: false
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          },
+          boundaryGap: false,
+          data: ['2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10']
+        },
+        yAxis: {
+          name: '新\n增\n人\n数',
+          nameLocation: 'center',
+          nameGap: 55,
+          nameRotate: 0,
+          nameTextStyle: {
+            color: '#a1a1a1',
+            align: 'center',
+            fontSize: 16
+          },
+          offset: 2,
+          axisLine: {
+            show: false,
+            lineStyle: {
+              color: '#f4f4f4'
+            }
+          },
+          axisLabel: {
+            color: '#c6c6c6'
+          },
+          axisTick: {
+            inside: true
+          },
+          splitLine: {
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          }
+        },
+        tooltip: {
+          axisPointer: {
+            type: 'cross'
+          }
+        },
+        series: [{
+            name: '行业',
+            type: 'line',
+            data: [500, 600, 100, 700, 500, 250],
+            symbolSize: 20,
+            symbol: 'pin'
+          },
+          {
+            name: '公司',
+            type: 'line',
+            data: [200, 300, 400, 800, 400, 250],
+            symbolSize: 20,
+            symbol: 'pin'
+          }
+        ]
+      };
+      var addBaropt = {
+        color: ['#ffcc00', '#21cbff'],
+        title: {
+          text: '新增人员趋势图',
+          textStyle: {
+            fontWeight: 'normal',
+            fontSize: '16'
+          },
+          top: 10,
+          x: 'center'
+        },
+        legend: {
+          top: 20,
+          right: 10,
+          align: 'left',
+          orient: 'vertical',
+          selectedMode: false,
+          itemHeight: 2
+        },
+        xAxis: {
+          axisLine: {
+            show: false
+          },
+          axisLabel: {
+            color: '#a1a1a1'
+          },
+          axisTick: {
+            show: false
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          },
+          data: ['2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10']
+        },
+        yAxis: {
+          name: '新\n增\n人\n数',
+          nameLocation: 'center',
+          nameGap: 55,
+          nameRotate: 0,
+          nameTextStyle: {
+            color: '#a1a1a1',
+            fontSize: 16
+          },
+          offset: 2,
+          axisLine: {
+            show: false,
+            lineStyle: {
+              color: '#f4f4f4'
+            }
+          },
+          axisLabel: {
+            color: '#c6c6c6'
+          },
+          axisTick: {
+            inside: true
+          },
+          splitLine: {
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          }
+        },
+        series: [{
+            name: '首次从业',
+            type: 'bar',
+            data: [500, 600, 100, 700, 500, 250]
+          },
+          {
+            name: '多次从业',
+            type: 'bar',
+            data: [200, 300, 400, 800, 400, 250]
+          }
+        ]
+      };
+      var allLineLgopt = {
+        color: ['#ffcc00', '#21cbff'],
+        grid: {
+          top: 10
+        },
+        xAxis: {
+          axisLine: {
+            show: false
+          },
+          axisLabel: {
+            color: '#a1a1a1'
+          },
+          axisTick: {
+            show: false
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          },
+          boundaryGap: false,
+          data: ['2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10']
+        },
+        yAxis: {
+          offset: 2,
+          axisLine: {
+            show: false,
+            lineStyle: {
+              color: '#f4f4f4'
+            }
+          },
+          axisLabel: {
+            color: '#c6c6c6'
+          },
+          axisTick: {
+            inside: true
+          },
+          splitLine: {
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          }
+        },
+        tooltip: {
+          axisPointer: {
+            type: 'cross'
+          }
+        },
+        series: [{
+            name: '行业',
+            type: 'line',
+            data: [1005, 4000, 1000, 7000, 5000, 2500],
+            symbolSize: 20,
+            symbol: 'pin'
+          },
+          {
+            name: '公司',
+            type: 'line',
+            data: [2005, 3000, 9000, 5000, 7000, 3500],
+            symbolSize: 20,
+            symbol: 'pin'
+          }
+        ]
+      };
+      var allLineSmopt = {
+        color: ['#ffcc00', '#21cbff'],
+        grid: {
+          bottom: 10
+        },
+        title: {
+          text: '新增人员趋势图',
+          textStyle: {
+            fontWeight: 'normal',
+            fontSize: '16'
+          },
+          top: 10,
+          x: 'center'
+        },
+        legend: {
+          top: 20,
+          right: 10,
+          align: 'left',
+          orient: 'vertical',
+          selectedMode: false,
+          itemHeight: 2
+        },
+        xAxis: {
+          axisLine: {
+            show: false
+          },
+          axisLabel: {
+            color: '#a1a1a1'
+          },
+          axisTick: {
+            show: false
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          },
+          boundaryGap: false,
+          data: ['2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10',
+            '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10',
+            '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10'
+          ]
+        },
+        yAxis: {
+          name: '新\n增\n人\n数',
+          nameLocation: 'center',
+          nameGap: 55,
+          nameRotate: 0,
+          nameTextStyle: {
+            color: '#a1a1a1',
+            align: 'center',
+            fontSize: 16
+          },
+          offset: 2,
+          axisLine: {
+            show: false,
+            lineStyle: {
+              color: '#f4f4f4'
+            }
+          },
+          axisLabel: {
+            color: '#c6c6c6'
+          },
+          axisTick: {
+            inside: true
+          },
+          splitLine: {
+            lineStyle: {
+              width: 2,
+              color: '#f6f6f6'
+            }
+          }
+        },
+        tooltip: {
+          axisPointer: {
+            type: 'cross'
+          }
+        },
+        series: [{
+            name: '行业',
+            type: 'line',
+            data: [500, 600, 100, 700, 500, 250, 500, 600, 100, 700, 500, 250, 500, 600, 100, 700, 500, 250,
+              500, 600, 100, 700, 500, 250
+            ],
+            symbolSize: 20,
+            symbol: 'pin'
+          },
+          {
+            name: '公司',
+            type: 'line',
+            data: [200, 300, 400, 800, 400, 250, 200, 300, 400, 800, 400, 250, 200, 300, 400, 800, 400, 250,
+              200, 300, 400, 800, 400, 250
+            ],
+            symbolSize: 20,
+            symbol: 'pin'
+          }
+        ]
+      };
+      // var allLineopt = {
+      //   color: ['#ffcc00', '#21cbff'],
+      //   title: {
+      //     text: '新增、离司人员对比',
+      //     textStyle: {
+      //       fontWeight: 'normal',
+      //       fontSize: '16'
+      //     },
+      //     top: 10,
+      //     x: 'center'
+      //   },
+      //   legend: {
+      //     top: 20,
+      //     right: 10,
+      //     align: 'left',
+      //     orient: 'vertical',
+      //     selectedMode: false,
+      //     itemHeight: 2
+      //   },
+      //   xAxis: {
+      //     axisLine: {
+      //       show: false
+      //     },
+      //     axisLabel: {
+      //       color: '#a1a1a1'
+      //     },
+      //     axisTick: {
+      //       show: false
+      //     },
+      //     splitLine: {
+      //       show: true,
+      //       lineStyle: {
+      //         width: 2,
+      //         color: '#f6f6f6'
+      //       }
+      //     },
+      //     boundaryGap: false,
+      //     data: ['2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10', '2018-10']
+      //   },
+      //   yAxis: {
+      //     name: '签\n单',
+      //     nameLocation: 'center',
+      //     nameGap: 55,
+      //     nameRotate: 0,
+      //     nameTextStyle: {
+      //       color: '#a1a1a1',
+      //       align: 'center',
+      //       fontSize: 16
+      //     },
+      //     offset: 2,
+      //     axisLine: {
+      //       show: false,
+      //       lineStyle: {
+      //         color: '#f4f4f4'
+      //       }
+      //     },
+      //     axisLabel: {
+      //       color: '#c6c6c6'
+      //     },
+      //     axisTick: {
+      //       inside: true
+      //     },
+      //     splitLine: {
+      //       lineStyle: {
+      //         width: 2,
+      //         color: '#f6f6f6'
+      //       }
+      //     }
+      //   },
+      //   series: [{
+      //       name: '新增',
+      //       type: 'line',
+      //       data: [500, 600, 100, 700, 500, 250, 500, 600, 100, 700, 500, 250, 500, 600, 100, 700, 500, 250, 500, 600, 100, 700, 500, 250],
+      //       symbolSize: 20,
+      //       symbol: 'pin'
+      //     },
+      //     {
+      //       name: '离司',
+      //       type: 'line',
+      //       data: [200, 300, 400, 800, 400, 250, 200, 300, 400, 800, 400, 250, 200, 300, 400, 800, 400, 250, 200, 300, 400, 800, 400, 250],
+      //       symbolSize: 20,
+      //       symbol: 'pin'
+      //     }
+      //   ]
+      // };
+      // var allPieopt = {
+      //   color: ['#ffcc00', '#21cbff'],
+      //   title: {
+      //     text: '新增、离司占比',
+      //     textStyle: {
+      //       fontWeight: 'normal',
+      //       fontSize: '16'
+      //     },
+      //     top: 10,
+      //     x: 'center'
+      //   },
+      //   legend: {
+      //     show: false
+      //   },
+      //   series: [{
+      //     type: 'pie',
+      //     data: [
+      //       {
+      //         name: '新增',
+      //         value: 40
+      //       },
+      //       {
+      //         name: '离司',
+      //         value: 60
+      //       }
+      //     ],
+      //     label: {
+      //       formatter: '{b}{c}%'
+      //     }
+      //   }]
+      // };
+
+      initChart('addLineSm', addLineSmopt)
+      initChart('addLineLg', addLineLgopt)
+      initChart('addBar', addBaropt)
+      initChart('allLineSm', allLineSmopt)
+      initChart('allLineLg', allLineLgopt)
+      // initChart('allLine', allLineopt)
+      // initChart('allPie', allPieopt)
+    });
+  </script>
+</body>
+
+</html>

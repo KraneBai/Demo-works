@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>保险</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="css/AdminLTE.min.css">
+  <link rel="stylesheet" href="css/_all-skins.min.css">
+  <link rel="stylesheet" href="css/common.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <a href="person-index.html" class="logo">
+        <span class="logo-mini"><b>JLBX</b></span>
+        <span class="logo-lg"><b>吉林省保险从业人员服务平台</b><i>中国太平洋人寿股份有限公司吉林分公司</i></span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="images//user2-160x160.jpg" class="user-image" alt="User Image">
+                <span class="hidden-xs">保险从业</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="user-header">
+                  <img src="images//user2-160x160.jpg" class="img-circle" alt="User Image">
+                  <p>许首旭</p>
+                </li>
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">修改密码</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">登出</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <ul class="sidebar-menu" data-widget="tree">
+          <li>
+            <a href="javascript:;" data-toggle="push-menu" role="button"><i class="fa fa-align-justify"></i></a>
+          </li>
+          <li><a href="person-index.html"><i class="fa fa-home"></i> <span>网站首页</span></a></li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-pie-chart"></i>
+              <span>业务分析</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href=""><i class="fa fa-circle-o"></i> General</a></li>
+            </ul>
+          </li>
+          <li><a href="person-details.html"><i class="fa fa-user"></i> <span>人员分析</span></a></li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-database"></i>
+              <span>业务数据管理</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="upload-data.html"><i class="fa fa-circle-o"></i> 上传数据</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> 上传情况</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> 数据修改</a></li>
+              <li><a href="upload-logs.html"><i class="fa fa-circle-o"></i> 上传记录</a></li>
+            </ul>
+          </li>
+          <li class="treeview active">
+            <a href="#">
+              <i class="fa fa-user"></i>
+              <span>用户和角色</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="user.html"><i class="fa fa-circle-o"></i> 用户管理</a></li>
+              <li class="active"><a href="add-user.html"><i class="fa fa-circle-o"></i> 角色管理</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-pie-chart"></i>
+              <span>基础数据管理</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href=""><i class="fa fa-circle-o"></i> General</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-commenting"></i>
+              <span>消息</span>
+              <span class="pull-right-container">
+                <span class="label bg-green pull-right">4</span>
+                <span class="label bg-red pull-right">4</span>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="messages.html">
+                  <i class="fa fa-circle-o"></i> 通知公告
+                  <span class="pull-right-container">
+                    <span class="label bg-green pull-right">4</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="notice.html">
+                  <i class="fa fa-circle-o"></i> 分析报告
+                  <span class="pull-right-container">
+                    <span class="label bg-red pull-right">4</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="content-wrapper">
+      <section class="content-header">
+        <ol class="breadcrumb" style="position: static; float: none;">
+          <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+          <li>用户和角色</li>
+          <li>用户管理</li>
+          <li class="active">新增用户</li>
+        </ol>
+      </section>
+
+      <section class="content multi-form-item content-common add-user">
+        <div class="box">
+          <form class="form-common">
+            <div class="form-block-item">
+              <label style="line-height: 40px;">用户名</label>
+              <div class="form-right">
+                <input type="text">
+              </div>
+            </div>
+            <div class="form-block-item">
+              <label style="line-height: 40px;">密码</label>
+              <div class="form-right">
+                <input type="text">
+              </div>
+            </div>
+            <div class="form-block-item">
+              <label style="line-height: 40px;">姓名</label>
+              <div class="form-right">
+                <input type="text">
+              </div>
+            </div>
+            <div class="form-block-item">
+              <label style="line-height: 40px;">手机号</label>
+              <div class="form-right">
+                <input type="text">
+              </div>
+            </div>
+            <div class="form-block-item">
+              <label style="line-height: 34px;">用户类型</label>
+              <div class="form-right" data-val="">
+                <div class="check-box">
+                  <input type="radio" name="user" id="company-user">
+                  <label for="company-user" class="check-box">公司</label>
+                </div>
+                <div class="check-box">
+                  <input type="radio" name="user" id="association">
+                  <label for="association" class="check-box">保险协会</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-block-item">
+              <label style="line-height: 34px;">公司类型</label>
+              <div class="form-right" data-val="">
+                <div class="check-box">
+                  <input type="radio" name="company" id="company">
+                  <label for="company" class="check-box">公司</label>
+                </div>
+                <div class="check-box">
+                  <input type="radio" name="company" id="life">
+                  <label for="life" class="check-box">寿险类型</label>
+                </div>
+                <div class="check-box">
+                  <input type="radio" name="company" id="property">
+                  <label for="property" class="check-box">财险类型</label>
+                </div>
+                <div class="check-box">
+                  <input type="radio" name="company" id="intermediary">
+                  <label for="intermediary" class="check-box">中介类型</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-block-item select-company">
+              <label style="line-height: 40px;">公司</label>
+              <div class="form-right text-select-item">
+                <select class="form-control select2">
+                  <option selected="selected">全部</option>
+                  <option>Alaska</option>
+                </select>
+                <select class="form-control select2">
+                  <option selected="selected">全部</option>
+                  <option>Alaska</option>
+                </select>
+                <select class="form-control select2">
+                  <option selected="selected">全部</option>
+                  <option>Alaska</option>
+                </select>
+                <select class="form-control select2">
+                  <option selected="selected">全部</option>
+                  <option>Alaska</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-block-item">
+              <label style="line-height: 40px;">职务</label>
+              <div class="form-right">
+                <input type="text">
+              </div>
+            </div>
+            <div class="form-block-item">
+              <label style="line-height: 40px;">分管工作</label>
+              <div class="form-right">
+                <input type="text">
+              </div>
+            </div>
+            <div class="form-block-item">
+              <label style="line-height: 40px;">数据级别</label>
+              <div class="form-right text-select-item">
+                <select class="form-control select2">
+                  <option selected="selected">请选择</option>
+                  <option>Alaska</option>
+                </select>
+                <select class="form-control select2">
+                  <option selected="selected">请选择</option>
+                  <option>Alaska</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-block-item">
+              <label style="line-height: 34px;">用户角色</label>
+              <div class="form-right" data-val="">
+                <div class="check-box">
+                  <input type="radio" name="role" id="1">
+                  <label for="1" class="check-box">财险保险公司（人员、业务分析）</label>
+                </div>
+                <div class="check-box">
+                  <input type="radio" name="role" id="2">
+                  <label for="2" class="check-box">财险保险公司（人员分析）</label>
+                </div>
+                <div class="check-box">
+                  <input type="radio" name="role" id="3">
+                  <label for="3" class="check-box">寿险保险公司（人员、业务分析）</label>
+                </div>
+                <div class="check-box">
+                  <input type="radio" name="role" id="4">
+                  <label for="4" class="check-box">寿险保险公司（人员分析）</label>
+                </div>
+                <div class="check-box">
+                  <input type="radio" name="role" id="5">
+                  <label for="5" class="check-box">行业协会（财险管理）</label>
+                </div>
+                <div class="check-box">
+                  <input type="radio" name="role" id="6">
+                  <label for="6" class="check-box">行业协会（寿险管理）</label>
+                </div>
+              </div>
+            </div>
+            <div class="mar-top20">
+              <a href="" class="form-btn search-btn">确定</a>
+              <a href="" class="form-btn reset-btn">返回</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
+    <script src="js/adminlte.min.js"></script>
+    <script>
+      $(function () {
+        $('.check-box input').change(function (e) {
+          // 获取单个点击的值
+          // console.log($(this).next().html())
+
+          // 拼接字符串
+          let checkParent = $(this).parents('.form-right');
+          let childInput = $(checkParent).find('input');
+          let childInputLen = childInput.length;
+          let val = ''
+          for (var i = 0; i < childInputLen; i++) {
+            if (childInput.eq(i).is(':checked')) {
+              val += ',' + childInput.eq(i).next().html()
+            }
+          }
+          checkParent.attr('data-val', val.substr(1))
+        })
+        $('.select2').select2();
+      });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+/* 人员分析详细 */
+.person-details .box {
+  padding: 40px;
+}
+
+.person-details .box h3 {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.person-details .box .row {
+  display: flex;
+  align-items: center;
+}
+
+/* 人员分析首页 */
+.person-index .box {
+  position: relative;
+}
+.person-index .box .pull-up-btn {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  padding: 0 10px 0 10px;
+  border: 1px solid #e0e0e0;
+  height: 30px;
+  line-height: 30px;
+  color: #333;    
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 99;
+}
+.person-index .box .pull-up-btn i {
+  margin-left: 10px;
+  vertical-align: middle;
+  line-height: 26px;
+  transform: rotate(0);
+  transition: transform .5s ease;
+}
+.person-index .box .form-block-item{
+  padding-left: 80px;
+  line-height: 40px;
+}
+.person-index .form-block-item > label {
+  width: 60px;
+}
+.person-index .form-right {
+  max-width: 100%;
+}
+.person-index .text-select-item > label,
+.person-index .text-select-item > a {
+  margin-right: 10px;
+  color: #333;
+}
+.person-index .text-select-item .select2 {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 40%;
+  max-width: 40%;
+}
+.person-index .text-select-item > a.active {
+  color: #00c3ff;
+}
+.person-index .text-select-item > label:last-child,
+.person-index .text-select-item > a:last-child {
+  margin-right: 0;
+}
+.person-index .text-select-item.urban-lists {
+  line-height: 15px;
+}
+.person-index .text-select-item.urban-lists a {
+  color: #808080;
+}
+.person-index .age-range input {
+  display: inline-block;
+  padding: 0 10px;
+  width: 80px;
+}
+.person-index .form-btn.search-btn,
+.person-index .form-btn.reset-btn {
+  padding: 0;
+  text-align: center;
+  width: 100px;
+}
+.person-tab-wrapper {
+  padding-top: 30px;
+  position: relative;
+}
+.person-tab-wrapper .box {
+  padding: 0;
+}
+.person-tab-wrapper > ul {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  border-bottom: none;
+}
+.person-tab-wrapper > ul li a {
+  margin-right: 0;
+  color: #00ccff;
+  background-color: #fff;
+  border: 1px solid #00ccff;
+  border-radius: 0;
+  border-right: none;
+}
+.person-tab-wrapper > ul li:first-child a {
+  border-radius: 4px 0 0 4px;
+}
+.person-tab-wrapper > ul li:last-child a {
+  border-radius: 0 4px 4px 0;
+  border-right: 1px solid #00ccff;
+}
+.person-tab-wrapper > ul li a:hover,
+.person-tab-wrapper .nav-tabs>li.active>a, 
+.person-tab-wrapper .nav-tabs>li.active>a:focus, 
+.person-tab-wrapper .nav-tabs>li.active>a:hover {
+  color: #fff;
+  background-color: #00ccff;
+  border: 1px solid #00ccff;
+}
+.person-tab-wrapper h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.person-tab-wrapper section {
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+.person-tab-wrapper section button {
+  margin-top: -10px;
+  float: right;
+}
+.person-tab-wrapper section button {
+  margin-top: -10px;
+  float: right;
+  background: #fff;
+}
+.person-tab-wrapper section button:last-child {
+  margin-right: 10px;
+}
+
+
+/* 返回按钮 */
+.back-btn {
+  margin-top: 20px;
+  padding: 0 20px;
+  display: inline-block;
+  border: 1px solid #00c3ff;
+  color: #00c3ff;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+}
+.back-btn:hover {
+  color: #00c3ff;
+}

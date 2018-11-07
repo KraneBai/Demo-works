@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/login.css">
+  <title>登录</title>
+</head>
+
+<body>
+  <div class="login-common">
+    <h1>吉林省保险从业人员服务平台</h1>
+
+    <div class="login-inner common-inner">
+      <div class="login-tab">
+        <span class="active" login-type="tel"><i class="ico-tel"></i>手机号登录</span>
+        <span login-type="account"><i class="ico-account"></i>账号登录</span>
+      </div>
+      <!-- 账号登录 -->
+      <form action="" class="login-account">
+        <div class="login-item">
+          <input type="text" placeholder="请输入账号">
+          <p>错误信息</p>
+        </div>
+        <div class="login-item">
+          <input type="text" placeholder="请输入密码">
+          <p>错误信息</p>
+          <a href="javascript:;" class="forget-pwd">忘记密码</a>
+        </div>
+        <div class="login-item">
+          <input type="submit" value="登录">
+        </div>
+      </form>
+      <!-- 手机号登录 -->
+      <form action="" class="login-tel">
+        <div class="login-item">
+          <input type="text" placeholder="请输入手机号">
+          <p>手机号不存在</p>
+        </div>
+        <div class="login-item verify-item">
+          <input type="text" placeholder="请输入验证码">
+          <a href="javascript:;" class="verify-btn" data-verify="login">获取验证码</a>
+          <p>验证码错误</p>
+        </div>
+        <div class="login-item">
+          <input type="submit" value="登录">
+        </div>
+      </form>
+    </div>
+
+    <div class="find-inner common-inner">
+      <h2>找回你的账号密码<a href="javascript:;" class="return-account">返回登录</a></h2>
+      <!-- 找回密码step1 -->
+      <form action="" class="find-tel">
+        <div class="login-item">
+          <input type="text" placeholder="请输入手机号">
+          <p>手机号不存在</p>
+        </div>
+        <div class="login-item verify-item">
+          <input type="text" placeholder="请输入验证码">
+          <a href="javascript:;" class="verify-btn">获取验证码</a>
+          <p>验证码错误</p>
+        </div>
+        <div class="login-item">
+          <a href="javascript:;" class="next-btn">下一步</a>
+        </div>
+
+      </form>
+      <!-- 找回密码step2 -->
+      <form action="" class="find-next">
+        <h3>账号：<span>185710853</span></h3>
+        <div class="login-item">
+          <input type="text" placeholder="请输入新密码">
+        </div>
+        <div class="login-item">
+          <input type="text" placeholder="请确认新密码">
+        </div>
+        <div class="login-item">
+          <input type="submit" value="确认">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    // 登录tab切换
+    $('.login-tab span').click(function () {
+      $('.login-tab span').removeClass('active');
+      $(this).addClass('active');
+      var loginType = $(this).attr('login-type');
+      if (loginType === 'tel') {
+        $('.login-inner .login-tel').show();
+        $('.login-inner .login-account').hide();
+      } else {
+        $('.login-inner .login-account').show();
+        $('.login-inner .login-tel').hide();
+      }
+    });
+    // 获取验证码
+    let timer1 = null;
+    let timer2 = null;
+    $(document).on('click', '.verify-btn', function () {
+      // 判断是找回密码还是登录
+      var isLogin = $(this).attr('data-verify') === 'login' ? true : false;
+      var timer = isLogin ? timer1 : timer2;
+      if (!timer) {
+        var seconds = 60;
+        var _this = this;
+        $(_this).html(seconds + 's');
+        timer = setInterval(function () {
+          seconds--;
+          if (seconds === 0) {
+            clearInterval(timer)
+            timer = null;
+            $(_this).html('获取验证码');
+            return;
+          }
+          $(_this).html(seconds + 's');
+        }, 1000);
+      }
+    });
+    // 返回登录字样按钮
+    $(document).on('click', '.return-account', function () {
+      $('.login-inner').show();
+      $('.find-inner').hide();
+    });
+    // 忘记密码字样按钮
+    $(document).on('click', '.forget-pwd', function () {
+      $('.find-inner').show();
+      $('.login-inner').hide();
+    });
+    // 忘记密码下一步按钮
+    $(document).on('click', '.next-btn', function () {
+      $('.find-inner .find-tel').hide();
+      $('.find-inner .find-next').show();
+    });
+  </script>
+</body>
+
+</html>

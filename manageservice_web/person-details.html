@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>人员分析详细</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="css/AdminLTE.min.css">
+  <link rel="stylesheet" href="css/_all-skins.min.css">
+  <link rel="stylesheet" href="css/person.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+
+    <header class="main-header">
+      <a href="person-index.html" class="logo">
+        <span class="logo-mini"><b>JLBX</b></span>
+        <span class="logo-lg"><b>吉林省保险从业人员服务平台</b><i>中国太平洋人寿股份有限公司吉林分公司</i></span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="images//user2-160x160.jpg" class="user-image" alt="User Image">
+                <span class="hidden-xs">保险从业</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="user-header">
+                  <img src="images//user2-160x160.jpg" class="img-circle" alt="User Image">
+                  <p>许首旭</p>
+                </li>
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">修改密码</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">登出</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <ul class="sidebar-menu" data-widget="tree">
+          <li>
+            <a href="javascript:;" data-toggle="push-menu" role="button"><i class="fa fa-align-justify"></i></a>
+          </li>
+          <li><a href="person-index.html"><i class="fa fa-home"></i> <span>网站首页</span></a></li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-pie-chart"></i>
+              <span>业务分析</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href=""><i class="fa fa-circle-o"></i> General</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="person-details.html"><i class="fa fa-user"></i> <span>人员分析</span></a></li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-database"></i>
+              <span>业务数据管理</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="upload-data.html"><i class="fa fa-circle-o"></i> 上传数据</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> 上传情况</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> 数据修改</a></li>
+              <li><a href="upload-logs.html"><i class="fa fa-circle-o"></i> 上传记录</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-user"></i>
+              <span>用户和角色</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="user.html"><i class="fa fa-circle-o"></i> 用户管理</a></li>
+              <li><a href="add-user.html"><i class="fa fa-circle-o"></i> 角色管理</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-pie-chart"></i>
+              <span>基础数据管理</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-up pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href=""><i class="fa fa-circle-o"></i> General</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-commenting"></i>
+              <span>消息</span>
+              <span class="pull-right-container">
+                <span class="label bg-green pull-right">4</span>
+                <span class="label bg-red pull-right">4</span>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="messages.html">
+                  <i class="fa fa-circle-o"></i> 通知公告
+                  <span class="pull-right-container">
+                    <span class="label bg-green pull-right">4</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="messages.html">
+                  <i class="fa fa-circle-o"></i> 分析报告
+                  <span class="pull-right-container">
+                    <span class="label bg-red pull-right">4</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="content-wrapper">
+      <section class="content-header">
+        <ol class="breadcrumb" style="position: static; float: none;">
+          <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+          <li>人员分析</li>
+          <li class="active">人员分析详细</li>
+        </ol>
+      </section>
+
+      <section class="content person-details">
+        <div class="box">
+          <h3>政治面貌分布</h3>
+          <div class="row">
+            <div class="col-sm-7">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>政治面貌</th>
+                    <th>人数</th>
+                    <th>行业占比</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>群众</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>共青团员</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>中共党员</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>民主党派人士</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  </tfoot>
+              </table>
+            </div>
+            <div class="col-sm-5">
+              <div id="politicalPie" style="width: 100%;height: 400px;"></div>
+            </div>
+          </div>
+          <h3>年龄分布</h3>
+          <div class="row">
+            <div class="col-sm-5">
+              <div id="agePie" style="width: 100%;height: 400px;"></div>
+            </div>
+            <div class="col-sm-7">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>年龄</th>
+                    <th>人数</th>
+                    <th>行业占比</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>18岁-24岁</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>25岁-34岁</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>35岁-44岁</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>45岁-54岁</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>55岁-64岁</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>65岁以上</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  </tfoot>
+              </table>
+            </div>
+          </div>
+          <h3>文化程度分布</h3>
+          <div class="row">
+            <div class="col-sm-7">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>文化程度</th>
+                    <th>人数</th>
+                    <th>行业占比</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>初中以下</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>高中</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>技工学校</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>中等专业学校和中等技术学校</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>大学专科和专科学校</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>大学本科</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>研究生</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>博士生</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  </tfoot>
+              </table>
+            </div>
+            <div class="col-sm-5">
+              <div id="educationPie" style="width: 100%;height: 400px;"></div>
+            </div>
+          </div>
+          <h3>性别分布</h3>
+          <div class="row">
+            <div class="col-sm-5">
+              <div id="sexPie" style="width: 100%;height: 400px;"></div>
+            </div>
+            <div class="col-sm-7">
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>性别</th>
+                    <th>人数</th>
+                    <th>行业占比</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>男</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  <tr>
+                    <td>女</td>
+                    <td>6666</td>
+                    <td>6666</td>
+                  </tr>
+                  </tfoot>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <a href="" class="form-btn back-btn">返回</a>
+          </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/echarts.common.min.js"></script>
+  <script src="js/adminlte.min.js"></script>
+  <script>
+    $(function () {
+
+      // 初始化图表
+      // 基于准备好的dom，初始化echarts实例
+      function initChart(ele, opts) {
+        var eleDom = echarts.init(document.getElementById(ele));
+        // 使用刚指定的配置项和数据显示图表。
+        eleDom.setOption(opts);
+        // tab切换时无法获取width的解决办法
+        eleDom.resize()
+        // on只能绑定一次
+        window.addEventListener("resize", function () {
+          eleDom.resize();
+        });
+      }
+      var politicalPieopt = {
+        color: ['#00c3ff', '#ffc600', '#ff8400', '#60d631', '#ff6f6f', '#1980ff', '#1980ff'],
+        legend: {
+          show: true,
+          bottom: 0
+        },
+        series: [{
+          type: 'pie',
+          center: ['50%', '45%'],
+          radius: [0, '70%'],
+          data: [{
+              name: '群众',
+              value: 45
+            },
+            {
+              name: '共青团员',
+              value: 15
+            },
+            {
+              name: '民主党派人士',
+              value: 30
+            },
+            {
+              name: '中共党员',
+              value: 10
+            }
+          ],
+          label: {
+            formatter: '{c}%'
+          }
+        }]
+      };
+      var agePieopt = {
+        color: ['#00c3ff', '#ffc600', '#ff8400', '#60d631', '#ff6f6f', '#1980ff', '#1980ff'],
+        legend: {
+          show: true,
+          bottom: 0
+        },
+        series: [{
+          type: 'pie',
+          center: ['50%', '45%'],
+          radius: [0, '70%'],
+          data: [{
+              name: '18岁-24岁',
+              value: 40
+            },
+            {
+              name: '25岁-34岁',
+              value: 60
+            },
+            {
+              name: '35岁-44岁',
+              value: 60
+            },
+            {
+              name: '45岁-54岁',
+              value: 60
+            },
+            {
+              name: '55岁-64岁',
+              value: 60
+            },
+            {
+              name: '65岁以上',
+              value: 60
+            }
+          ],
+          label: {
+            formatter: '{c}%'
+          }
+        }]
+      };
+      var educationPieopt = {
+        color: ['#00c3ff', '#ffc600', '#ff8400', '#60d631', '#ff6f6f', '#1980ff', '#1980ff'],
+        legend: {
+          show: true,
+          bottom: 0
+        },
+        series: [{
+          type: 'pie',
+          center: ['50%', '45%'],
+          radius: [0, '70%'],
+          data: [{
+              name: '初中以下',
+              value: 40
+            },
+            {
+              name: '高中',
+              value: 60
+            },
+            {
+              name: '技工学校',
+              value: 60
+            },
+            {
+              name: '中等专业学校和中等技术学校',
+              value: 60
+            },
+            {
+              name: '大学专科和专科学校',
+              value: 60
+            },
+            {
+              name: '大学本科',
+              value: 60
+            },
+            {
+              name: '研究生',
+              value: 60
+            },
+            {
+              name: '博士生',
+              value: 60
+            }
+          ],
+          label: {
+            formatter: '{c}%'
+          }
+        }]
+      };
+      var sexPieopt = {
+        color: ['#00c3ff', '#ffc600', '#ff8400', '#60d631', '#ff6f6f', '#1980ff', '#1980ff'],
+        legend: {
+          show: true,
+          bottom: 0
+        },
+        series: [{
+          type: 'pie',
+          center: ['50%', '45%'],
+          radius: [0, '70%'],
+          data: [{
+              name: '男',
+              value: 40
+            },
+            {
+              name: '女',
+              value: 60
+            }
+          ],
+          label: {
+            formatter: '{c}%'
+          }
+        }]
+      };
+
+      initChart('politicalPie', politicalPieopt)
+      initChart('agePie', agePieopt)
+      initChart('educationPie', educationPieopt)
+      initChart('sexPie', sexPieopt)
+    });
+  </script>
+</body>
+
+</html>
